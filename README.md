@@ -11,6 +11,8 @@ Additional description about the project and its features.
 - Major languages,
 - frameworks,
 - technologies used
+- development
+
 
 ## Live Demo
 
