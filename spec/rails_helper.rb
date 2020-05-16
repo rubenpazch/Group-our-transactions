@@ -6,6 +6,8 @@ require File.expand_path('../config/environment', __dir__)
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'capybara/rspec'
+require 'support/factory_bot'
+require 'faker'
 
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -69,27 +71,27 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
-  config.before(:suite) do
-    DatabaseCleaner.clean_with(:truncation)
-  end
+  # config.before(:suite) do
+  #  DatabaseCleaner.clean_with(:truncation)
+  # end
 
-  config.before(:each) do
-    DatabaseCleaner.strategy = :transaction
-  end
-
-  config.before(:each, js: true) do
-    DatabaseCleaner.strategy = :truncation
-  end
+  # config.before(:each) do
+  #  DatabaseCleaner.strategy = :transaction
+  # end
+  #
+  # config.before(:each, js: true) do
+  #  DatabaseCleaner.strategy = :truncation
+  # end
 
   # This block must be here, do not combine with the other `before(:each)` block.
   # This makes it so Capybara can see the database.
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
+  # config.before(:each) do
+  #  DatabaseCleaner.start
+  # end
+  #
+  # config.after(:each) do
+  #  DatabaseCleaner.clean
+  # end
 
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
-
-  config.include Devise::Test::ControllerHelpers, type: :controller
+  # config.include Devise::Test::ControllerHelpers, type: :controller
 end
