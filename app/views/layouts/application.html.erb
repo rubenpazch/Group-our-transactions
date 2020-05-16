@@ -10,6 +10,12 @@
   </head>
 
   <body>
+    <%= render 'layouts/navbar'  %>
+    
+    <% flash.each do |message_type, message| %>
+       <div class="alert alert-info"><%= message %></div>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
