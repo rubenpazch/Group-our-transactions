@@ -2,6 +2,8 @@
 /* if this line breaks just add a ~*/
 /* @import "~bootstrap/scss/bootstrap";*/
 @import 'font_awesome5.css';
+@import 'navbar';
+@import 'login';
 
 @font-face {
     font-family: 'proximanova';
@@ -17,21 +19,9 @@ body{
 }
 
 a {
-    color: #ffffff;
+    color: #fff;
 }
 
-.nav {
-    background-color: #2b5f9a;
-}
-
-nav {
-    background-color: #2b5f9a;
-}
-
-.title-app {
-    text-transform: uppercase;
-    color: #ffffff;
-    font-size: 1.5rem;
-    padding: 5px 0 0 0; 
-    margin: 0;   
+a:hover {
+    color: #000;
 }

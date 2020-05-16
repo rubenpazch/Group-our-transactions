@@ -1,5 +1,7 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+<section class="login-wrapper d-flex justify-content-center">
+  <div class="login d-flex justify-content-center align-items-center">
+      <div class="login-form">
+            <%= render 'form', user: @user %>            
+      </div>    
+  </div>
+</section>

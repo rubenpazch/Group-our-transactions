@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :logged_in?, only: %i[index]
   before_action :set_user, only: %i[show edit update destroy]
 
   # GET /users
@@ -24,13 +25,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    
-      if @user.save
-        redirect_to @user, notice: 'User was successfully created.'        
-      else        
-        redirect_to signup_url, notice: @user.errors[:username].first
-      end
-    
+    if @user.save
+      redirect_to @user, notice: 'User was successfully created.'
+    else
+      redirect_to signup_url, notice: @user.errors[:username].first
+    end
   end
 
   # PATCH/PUT /users/1

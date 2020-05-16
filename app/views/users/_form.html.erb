@@ -1,10 +1,13 @@
-<%= form_with(model: user, local: true) do |form| %>
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<%= form_with(model: user, local: true) do |form| %>  
+  <ul class="login-items">
+      <li><h1>Sign up</h1></li>
+      <li><%= form.label :username %></li>
+      <li><%= form.text_field :username, class: 'form-control' %></li> 
+      <li><br></li>
+      <li><%= form.submit "Create", class: "btn btn-success" %><%= link_to "Already register?", login_path, class: "sign-up-link" %></li>
+      <li><br></li>
+      <li><%= link_to 'Back', users_path %></li>
+    </ul>
 <% end %>
+
+
