@@ -1,0 +1,12 @@
+<% provide(:title, "home") %>
+
+<% controller.redirect_to users_path if logged_in? %>
+
+<div class="container-fluid">
+  <h1 class="home-app-name">group our transactions</h1>
+
+  <div class="text-center">
+    <%= link_to "log in", login_path, class: "btn btn-primary" %></p>
+    <%= link_to "sign up", signup_path, class: "btn btn-secondary" %></p>
+  </div>
+</div>
