@@ -9,11 +9,11 @@
   <h1 class="title-app">group our transactions</h1>
   <div class="login">
     <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Sing up</a>
+      <li class="nav-item">        
+        <%= link_to "Sing up ", signup_path, class: "nav-link active", method: 'get' %>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Sing in</a>
+      <li class="nav-item">        
+        <%= link_to "Sing in", login_path, class: "nav-link", method: 'get' %>
       </li>
       <li class="nav-item">        
         <%= link_to "Log out", logout_path, class: "nav-link", method: 'delete' %>

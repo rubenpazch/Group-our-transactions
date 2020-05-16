@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
+  
   def new; end
-  include SessionsHelper
   def create
     @user = User.find_by(username: params[:session][:username])
     if @user
       log_in @user
       redirect_to @user, notice: 'user successfully logged in.'
     else
-      render :new, danger: 'user not found.'
+      redirect_to login_url, notice: 'user not found.'
     end
   end
 
