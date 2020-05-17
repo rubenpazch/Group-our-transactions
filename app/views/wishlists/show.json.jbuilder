@@ -1,1 +1,1 @@
-json.partial! "wishlists/wishlist", wishlist: @wishlist
+json.partial! 'wishlists/wishlist', wishlist: @wishlist
