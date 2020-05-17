@@ -1,7 +1,15 @@
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+<div class="row profile ">
+   <ul class="col-3 menu-profile column border-right border-secondary">
+      <li><div class="icon-user"> <i class="fas fa-user"></i></div></li>      
+      <li class="text-center "><%= @user.username %> | <%= link_to 'Edit', edit_user_path(@user) %></li>
+      <li class="border-bottom border-secondary"> <br> </li>
+      <li class="border-bottom border-secondary"> <%= link_to "All my transactions", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li class="border-bottom border-secondary"> <%= link_to "All my external transactions ", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li class="border-bottom border-secondary"> <%= link_to "All groups", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li>  </li>
+   </ul>
+   <div class="col-9 content-profile">
+   asdasdasd
+   </div>
+</div>    
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

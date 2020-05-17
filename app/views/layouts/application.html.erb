@@ -10,12 +10,16 @@
   </head>
 
   <body>
-    <%= render 'layouts/navbar'  %>
-    
+    <%= render 'layouts/navbar'  %>    
     <% flash.each do |message_type, message| %>
        <div class="alert alert-info"><%= message %></div>
     <% end %>
-
-    <%= yield %>
+    <main class="container-fluid">
+      <section class="d-flex justify-content-center ">
+        <div class="d-flex justify-content-center align-items-center container">
+          <%= yield %>
+        </div>
+      </section>
+    <main>
   </body>
 </html>
