@@ -1,0 +1,28 @@
+@import 'bootstrap/scss/bootstrap';
+/* if this line breaks just add a ~*/
+/* @import "~bootstrap/scss/bootstrap";*/
+@import 'font_awesome5.css';
+@import 'navbar';
+@import 'login';
+@import 'profile';
+
+@font-face {
+    font-family: 'proximanova';
+    src: url('FontsFree-Net-Proxima-Nova-Bold.otf') 
+    format('opentype');
+}
+
+body{
+    background-color: #3778c2;
+    font-family: 'proximanova', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #000;
+}

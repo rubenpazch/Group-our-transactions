@@ -7,8 +7,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# create defalt user
+User.create!(username: "rpazchuspe")
 
-User.create(username: 'user01')
-User.create(username: 'user02')
-User.create(username: 'user03')
-User.create(username: 'user04')
+49.times do |n|
+    username = Faker::Alphanumeric.alpha(number: 10) 
+  User.create!(username: username)
+end
+
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(1).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(1).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(2).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(2).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(3).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(3).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(4).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(5).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(6).id)
+Group.create!(name: Faker::Types.rb_string, icon: "chart-area", user_id:User.find(7).id)
+
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(1).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(1).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(1).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(1).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(2).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(2).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(2).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(2).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(2).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(3).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(3).id)
+Wishlist.create!(name: Faker::Device.model_name, price: Faker::Number.between(from: 1, to: 100), author_id:User.find(3).id)
+

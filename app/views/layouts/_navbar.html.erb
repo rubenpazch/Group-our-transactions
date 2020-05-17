@@ -1,0 +1,29 @@
+<nav class="d-flex justify-content-between">
+  <div class="options">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Others</a>
+      </li>  
+    </ul>
+  </div>
+  <h1 class="title-app">group our transactions</h1>
+  <div class="login-nav-bar">
+    <ul class="nav">
+      <li class="nav-item">      
+        <% if !logged_in?  %>
+        <%= link_to "Sing up ", signup_path, class: "nav-link active", method: 'get' %>
+        <% end %>
+      </li>
+      <li class="nav-item">  
+        <% if !logged_in?  %>      
+        <%= link_to "Sing in", login_path, class: "nav-link", method: 'get' %>
+        <% end %>
+      </li>
+      <li class="nav-item">   
+        <% if logged_in? %>     
+        <%= link_to "Log out", logout_path, class: "nav-link", method: 'delete' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

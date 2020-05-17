@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_15_163749) do
+ActiveRecord::Schema.define(version: 2020_05_17_045316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: :cascade do |t|
+    t.string "name"
+    t.string "icon"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_groups_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -21,4 +30,26 @@ ActiveRecord::Schema.define(version: 2020_05_15_163749) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "wishlists", force: :cascade do |t|
+    t.string "name"
+    t.integer "price"
+    t.integer "author_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["author_id"], name: "index_wishlists_on_author_id"
+  end
+
+  create_table "wishlists_groups", force: :cascade do |t|
+    t.bigint "wishlist_id", null: false
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "index_wishlists_groups_on_group_id"
+    t.index ["wishlist_id"], name: "index_wishlists_groups_on_wishlist_id"
+  end
+
+  add_foreign_key "groups", "users"
+  add_foreign_key "wishlists", "users", column: "author_id"
+  add_foreign_key "wishlists_groups", "groups"
+  add_foreign_key "wishlists_groups", "wishlists"
 end
