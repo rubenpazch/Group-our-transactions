@@ -1,12 +1,10 @@
-<% provide(:title, "home") %>
-
-<% controller.redirect_to users_path if logged_in? %>
-
-<div class="container-fluid">
-  <h1 class="home-app-name">group our transactions</h1>
-
-  <div class="text-center">
-    <%= link_to "log in", login_path, class: "btn btn-primary" %></p>
-    <%= link_to "sign up", signup_path, class: "btn btn-secondary" %></p>
-  </div>
-</div>
+      
+        <%= form_with( url: login_path, local: true) do |f| %>
+        <ul class="login-items">
+          <li><h1>Sign in</h1></li>
+          <li><%= f.label :username %></li>
+          <li><%= f.text_field :username, class: 'form-control' %></li>
+          <li><br></li>
+          <li><%= f.submit "Log in", class: "btn btn-success" %><%= link_to "sign up?", signup_path, class: "sign-up-link" %></li>
+        </ul>
+        <% end %>

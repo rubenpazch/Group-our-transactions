@@ -15,7 +15,9 @@
   <div class="field">
     <div><%= form.label :icon %></div>
     <% @group.each do |g| %>      
-      
+      <% if @groups_added.nil?  %>
+        <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+      <% end %>
       <% if @groups_added.first.nil?  %>
         <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
       <% else %>

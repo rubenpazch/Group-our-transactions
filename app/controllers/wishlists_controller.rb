@@ -1,4 +1,5 @@
 class WishlistsController < ApplicationController
+  before_action :logged_in_user
   before_action :set_wishlist, only: %i[show edit update destroy]
 
   # GET /wishlists
@@ -11,12 +12,18 @@ class WishlistsController < ApplicationController
     @wishlists = current_user.list_wishlists_join_groups
   end
 
+  def group_wishlists
+    @group = Group.find(params[:id])
+    @wishlists = @group.wishlists
+  end
+
   # GET /wishlists/1
   # GET /wishlists/1.json
   def show; end
 
   # GET /wishlists/new
   def new
+    @groups_added = []
     @wishlist = Wishlist.new
     @group = Group.all
   end

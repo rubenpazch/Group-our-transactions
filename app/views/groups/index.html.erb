@@ -1,31 +1,33 @@
-<p id="notice"><%= notice %></p>
+<br>
+<div class="d-flex justify-content-between align-items-end pl-2">
+  <div>List groups</div>
+  <div></div>
+  <div><%= link_to "New",  new_group_path, class: "btn btn-success" %> </div>  
+</div>    
+<br>
 
-<h1>Groups</h1>
-
-<table>
+<table class="table">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Icon</th>
-      <th>User</th>
-      <th colspan="3"></th>
+      <th scope="col">Name</th>
+      <th scope="col">Icon</th>
+      <th scope="col">User</th>
+      <th scope="col">Created at</th>
+      <th scope="col" colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td><%= group.name %></td>
-        <td><%= group.icon %></td>
-        <td><%= group.user_id %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td scope="row"><%= link_to group.name, group_wishlists_path(:id => group.id) %></td>
+        <td scope="row"><i class="<%= group.icon %>"></i> </td>
+        <td scope="row"><%= group.creator.username %></td>
+        <td scope="row"><%= group.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></td>
+        <td scope="row"><%= link_to 'Show', group %></td>
+        <td scope="row"><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td scope="row"><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Group', new_group_path %>
