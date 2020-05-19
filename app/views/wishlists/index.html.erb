@@ -1,29 +1,54 @@
-<p id="notice"><%= notice %></p>
+<div class="row profile ">
+   <ul class="col-3 menu-profile column border-right border-secondary">
+      <li > <br> </li>
+      <li><div class="icon-user"> <i class="fas fa-user"></i></div></li>      
+      <li class="text-center "><%= current_user.username %> | <%= link_to 'Edit', edit_user_path(current_user) %></li>
+      <li class="border-bottom border-secondary"> <br> </li>
+      <li class="border-bottom border-secondary"> <%= link_to "All my transactions", wishlists_path, class: "nav-link active", method: 'get' %></li>
+      <li class="border-bottom border-secondary"> <%= link_to "All my external transactions ", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li class="border-bottom border-secondary"> <%= link_to "All groups", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li>  </li>
+   </ul>
+   <div class="col-9 content-profile">
+    <br>
+    <div class="d-flex justify-content-between align-items-end pl-2">
+      <div>Gift credit</div>
+      <div><%=  number_to_currency(current_user.all_total_amount, precision: 2)   %></div>
+      <div><%= link_to "New",  new_wishlist_path, class: "btn btn-success" %> </div>
+      
+    </div>    
+    <br>
+    <table class="table">
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Icon</th>
+          <th scope="col">Date</th>
+          <th colspan="3" scope="col">Options</th>
+        </tr>
+      </thead>
 
-<h1>Wishlists</h1>
+      <tbody>
+        <% @wishlists.each do |wishlist| %>
+          <tr>
+            <td scope="row"><%= wishlist.name %></td>
+            <td><%= number_to_currency(wishlist.price, precision: 2)  %></td>
+            <% if wishlist.icons? %>
+              <td> 
+                <% wishlist.groups.each do |t| %> 
+                  <i class="<%= t.icon %>"></i> 
+                <% end %>
+              </td>
+            <% else %>
+              <td> - </td>
+            <% end%>  
+            <td><%= wishlist.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></td>
+            <td><%= link_to 'Show', wishlist %></td>
+            <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
+            <td><%= link_to 'Destroy', wishlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+   </div>
+</div>    
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wishlists.each do |wishlist| %>
-      <tr>
-        <td><%= wishlist.name %></td>
-        <td><%= wishlist.price %></td>
-        <td><%= link_to 'Show', wishlist %></td>
-        <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
-        <td><%= link_to 'Destroy', wishlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Wishlist', new_wishlist_path %>

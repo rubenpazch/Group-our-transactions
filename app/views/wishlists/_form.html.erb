@@ -1,27 +1,32 @@
+<h2>Add new wishlist</h2>
+<div>
 <%= form_with(model: wishlist, local: true) do |form| %>
-  <% if wishlist.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(wishlist.errors.count, "error") %> prohibited this wishlist from being saved:</h2>
-
-      <ul>
-        <% wishlist.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div><%= form.label :name %></div>
+    <div><%= form.text_field :name %></div>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+    <div><%= form.label :price %></div>
+    <div><%= form.number_field :price %></div>
   </div>
-
+  
+  <div class="field">
+    <div><%= form.label :icon %></div>
+    <% @group.each do |g| %>      
+      <%= check_box_tag "wishlist[group_ids][]", g.id  %>
+      <%= label_tag(:icon, "#{g.name}") %>
+      <i class="<%= g.icon %>"></i> 
+      <br>
+    <% end %>
+  </div>
+  
   <div class="actions">
-    <%= form.submit %>
+    <div>
+      <br>
+      <%= form.submit %>
+    </div>
   </div>
 <% end %>
+</div>
