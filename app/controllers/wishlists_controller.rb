@@ -12,6 +12,11 @@ class WishlistsController < ApplicationController
     @wishlists = current_user.list_wishlists_join_groups
   end
 
+  def group_wishlists
+    @group = Group.find(params[:id])
+    @wishlists = @group.wishlists
+  end
+
   # GET /wishlists/1
   # GET /wishlists/1.json
   def show; end

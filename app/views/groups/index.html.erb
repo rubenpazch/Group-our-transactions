@@ -20,7 +20,7 @@
   <tbody>
     <% @groups.each do |group| %>
       <tr>
-        <td scope="row"><%= group.name %></td>
+        <td scope="row"><%= link_to group.name, group_wishlists_path(:id => group.id) %></td>
         <td scope="row"><i class="<%= group.icon %>"></i> </td>
         <td scope="row"><%= group.creator.username %></td>
         <td scope="row"><%= group.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></td>
