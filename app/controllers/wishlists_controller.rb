@@ -4,7 +4,7 @@ class WishlistsController < ApplicationController
   # GET /wishlists
   # GET /wishlists.json
   def index
-    @wishlists = Wishlist.all
+    @wishlists = current_user.wishlists_order_recent
   end
 
   # GET /wishlists/1
@@ -14,6 +14,7 @@ class WishlistsController < ApplicationController
   # GET /wishlists/new
   def new
     @wishlist = Wishlist.new
+    @group = Group.all
   end
 
   # GET /wishlists/1/edit
@@ -23,16 +24,19 @@ class WishlistsController < ApplicationController
   # POST /wishlists.json
   def create
     @wishlist = Wishlist.new(wishlist_params)
-
-    respond_to do |format|
+    @wishlist.author_id= current_user.id
+    @groups_ids = params[:wishlist][:group_ids]
+    
       if @wishlist.save
-        format.html { redirect_to @wishlist, notice: 'Wishlist was successfully created.' }
-        format.json { render :show, status: :created, location: @wishlist }
+        @groups_ids.each do |g| 
+          @wishlist.groups << Group.find(g) 
+        end    
+        
+        redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @wishlist.errors, status: :unprocessable_entity }
+        redirect_to new_wishlist_url, notice: @user.errors[:username].first
       end
-    end
+    
   end
 
   # PATCH/PUT /wishlists/1
@@ -68,6 +72,8 @@ class WishlistsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def wishlist_params
-    params.require(:wishlist).permit(:name, :price)
+    params.require(:wishlist).permit(:name, :price, 
+      :groups_ids => [:id, :icon]
+    )  
   end
 end

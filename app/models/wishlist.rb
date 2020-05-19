@@ -1,9 +1,14 @@
-class Wishlist < ApplicationRecord
-  has_and_belongs_to_many :groups
-  has_many :groups, through: :wishlists_groups
-
+class Wishlist < ApplicationRecord  
+  has_many :wishlists_groups, dependent: :destroy
+  has_many :groups, -> { distinct }, through: :wishlists_groups
   belongs_to :author, class_name: 'User'
 
-  # has_many :wishlists_groups
-  # has_many :groups, -> { distinct }, through: :wishlists_groups
+
+  def have_icon?
+    if wishlists_groups.present?  
+      true
+    else 
+      false
+    end 
+  end
 end
