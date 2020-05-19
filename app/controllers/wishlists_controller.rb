@@ -56,7 +56,7 @@ class WishlistsController < ApplicationController
           @wishlist.groups << Group.find(g)
         end
       else
-        WishlistsGroup.find_by(wishlist_id: params[:id]).destroy
+        WishlistsGroup.where(wishlist_id: params[:id]).destroy_all
       end
 
       redirect_to wishlists_path, notice: 'Wishlist was successfully udpated.'
