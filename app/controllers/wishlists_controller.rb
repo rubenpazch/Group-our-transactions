@@ -7,6 +7,10 @@ class WishlistsController < ApplicationController
     @wishlists = current_user.wishlists_order_recent
   end
 
+  def list_external
+    @wishlists = current_user.list_wishlists_join_groups
+  end
+
   # GET /wishlists/1
   # GET /wishlists/1.json
   def show; end
@@ -18,7 +22,10 @@ class WishlistsController < ApplicationController
   end
 
   # GET /wishlists/1/edit
-  def edit; end
+  def edit
+    @group = Group.all
+    @groups_added = Wishlist.find(params[:id]).groups
+  end
 
   # POST /wishlists
   # POST /wishlists.json
@@ -28,10 +35,9 @@ class WishlistsController < ApplicationController
     @groups_ids = params[:wishlist][:group_ids]
 
     if @wishlist.save
-      @groups_ids.each do |g|
+      @groups_ids&.each do |g|
         @wishlist.groups << Group.find(g)
       end
-
       redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
     else
       redirect_to new_wishlist_url, notice: @user.errors[:username].first
@@ -41,14 +47,21 @@ class WishlistsController < ApplicationController
   # PATCH/PUT /wishlists/1
   # PATCH/PUT /wishlists/1.json
   def update
-    respond_to do |format|
-      if @wishlist.update(wishlist_params)
-        format.html { redirect_to @wishlist, notice: 'Wishlist was successfully updated.' }
-        format.json { render :show, status: :ok, location: @wishlist }
+    @groups_ids = params[:wishlist][:group_ids]
+
+    if @wishlist.update(wishlist_params)
+
+      if !@groups_ids.nil?
+        @groups_ids.each do |g|
+          @wishlist.groups << Group.find(g)
+        end
       else
-        format.html { render :edit }
-        format.json { render json: @wishlist.errors, status: :unprocessable_entity }
+        WishlistsGroup.where(wishlist_id: params[:id]).destroy_all
       end
+
+      redirect_to wishlists_path, notice: 'Wishlist was successfully udpated.'
+    else
+      redirect_to new_wishlist_url, notice: @user.errors[:username].first
     end
   end
 

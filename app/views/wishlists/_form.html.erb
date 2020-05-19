@@ -1,4 +1,4 @@
-<h2>Add new wishlist</h2>
+
 <div>
 <%= form_with(model: wishlist, local: true) do |form| %>
   
@@ -15,7 +15,17 @@
   <div class="field">
     <div><%= form.label :icon %></div>
     <% @group.each do |g| %>      
-      <%= check_box_tag "wishlist[group_ids][]", g.id  %>
+      
+      <% if @groups_added.first.nil?  %>
+        <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+      <% else %>
+        <% if @groups_added.find_by(id: g.id)  %>
+          <%= check_box_tag 'activated[]', "wishlist[group_ids][]", g.id  %>          
+        <% else  %>
+          <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+        <% end %>
+      <% end %>
+
       <%= label_tag(:icon, "#{g.name}") %>
       <i class="<%= g.icon %>"></i> 
       <br>

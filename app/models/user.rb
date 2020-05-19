@@ -16,7 +16,11 @@ class User < ApplicationRecord
   end
 
   def list_wishlists_join_groups
-    wishlists.joins(:wishlists_groups)
+    new_list = []
+    wishlists.each do |t|
+      new_list << t unless WishlistsGroup.find_by(wishlist_id: t.id).present?
+    end
+    new_list
   end
 
   def wishlists_order_recent
