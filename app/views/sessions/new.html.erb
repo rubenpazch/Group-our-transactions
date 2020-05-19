@@ -1,6 +1,4 @@
-<section class="login-wrapper d-flex justify-content-center">
-  <div class="login d-flex justify-content-center align-items-center">
-      <div class="login-form">
+
       
         <%= form_with( url: login_path, local: true) do |f| %>
         <ul class="login-items">
@@ -11,7 +9,3 @@
           <li><%= f.submit "Log in", class: "btn btn-success" %><%= link_to "sign up?", signup_path, class: "sign-up-link" %></li>
         </ul>
         <% end %>
-
-      </div>    
-  </div>
-</section>

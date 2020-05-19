@@ -1,4 +1,5 @@
-class WishlistsController < ApplicationController
+class WishlistsController < ApplicationController  
+  before_action :logged_in_user
   before_action :set_wishlist, only: %i[show edit update destroy]
 
   # GET /wishlists

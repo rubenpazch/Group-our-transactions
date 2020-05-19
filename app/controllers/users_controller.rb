@@ -1,6 +1,5 @@
-class UsersController < ApplicationController
-  before_action :logged_in?, only: %i[index]
-  before_action :set_user, only: %i[show edit update destroy]
+class UsersController < ApplicationController  
+  before_action :logged_in_user, only: %i[index edit update destroy]
 
   # GET /users
   # GET /users.json
