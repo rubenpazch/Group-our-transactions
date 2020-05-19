@@ -24,15 +24,13 @@ class GroupsController < ApplicationController
   # POST /groups.json
   def create
     @group = Group.new(group_params)
+    @group.user_id = current_user.id
+    @group.icon = params[:icon]
 
-    respond_to do |format|
-      if @group.save
-        format.html { redirect_to @group, notice: 'Group was successfully created.' }
-        format.json { render :show, status: :created, location: @group }
-      else
-        format.html { render :new }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
+    if @group.save
+      redirect_to groups_path, notice: 'Group was successfully created.'
+    else
+      redirect_to new_group_url, notice: @group.errors[:name].first
     end
   end
 
