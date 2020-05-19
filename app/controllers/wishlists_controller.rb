@@ -18,8 +18,10 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists/new
   def new
+    @groups_added = []
     @wishlist = Wishlist.new
     @group = Group.all
+    
   end
 
   # GET /wishlists/1/edit
