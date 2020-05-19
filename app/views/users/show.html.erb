@@ -5,7 +5,7 @@
       <li class="text-center "><%= @user.username %> | <%= link_to 'Edit', edit_user_path(@user) %></li>
       <li class="border-bottom border-secondary"> <br> </li>
       <li class="border-bottom border-secondary"> <%= link_to "All my transactions", wishlists_path, class: "nav-link active", method: 'get' %></li>
-      <li class="border-bottom border-secondary"> <%= link_to "All my external transactions ", signup_path, class: "nav-link active", method: 'get' %></li>
+      <li class="border-bottom border-secondary"> <%= link_to "All my external transactions ", external_wishlists_path, class: "nav-link active", method: 'get' %></li>
       <li class="border-bottom border-secondary"> <%= link_to "All groups", signup_path, class: "nav-link active", method: 'get' %></li>
       <li>  </li>
    </ul>
