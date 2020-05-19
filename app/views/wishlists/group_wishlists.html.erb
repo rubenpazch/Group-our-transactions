@@ -10,6 +10,7 @@
       <th scope="col">Name</th>
       <th scope="col">Price</th>
       <th scope="col">Icon</th>
+      <th scope="col">Creator</th>
       <th scope="col">Date</th>
       <th colspan="3" scope="col">Options</th>
     </tr>
@@ -28,6 +29,7 @@
         <% else %>
           <td> - </td>
         <% end%>  
+        <td><%= wishlist.author.username %></td>
         <td><%= wishlist.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></td>
         <td><%= link_to 'Show', wishlist %></td>
         <td><%= link_to 'Edit', edit_wishlist_path(wishlist) %></td>
