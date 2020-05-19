@@ -15,12 +15,11 @@ class User < ApplicationRecord
     wishlists.sum(:price)
   end
 
-  def list_wishlists_join_groups 
+  def list_wishlists_join_groups
     wishlists.joins(:wishlists_groups)
   end
 
   def wishlists_order_recent
     wishlists.order(created_at: :desc)
   end
-
 end

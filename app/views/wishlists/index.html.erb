@@ -32,7 +32,7 @@
           <tr>
             <td scope="row"><%= wishlist.name %></td>
             <td><%= number_to_currency(wishlist.price, precision: 2)  %></td>
-            <% if wishlist.have_icon? %>
+            <% if wishlist.icons? %>
               <td> 
                 <% wishlist.groups.each do |t| %> 
                   <i class="<%= t.icon %>"></i> 

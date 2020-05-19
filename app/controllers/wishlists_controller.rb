@@ -24,19 +24,18 @@ class WishlistsController < ApplicationController
   # POST /wishlists.json
   def create
     @wishlist = Wishlist.new(wishlist_params)
-    @wishlist.author_id= current_user.id
+    @wishlist.author_id = current_user.id
     @groups_ids = params[:wishlist][:group_ids]
-    
-      if @wishlist.save
-        @groups_ids.each do |g| 
-          @wishlist.groups << Group.find(g) 
-        end    
-        
-        redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
-      else
-        redirect_to new_wishlist_url, notice: @user.errors[:username].first
+
+    if @wishlist.save
+      @groups_ids.each do |g|
+        @wishlist.groups << Group.find(g)
       end
-    
+
+      redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
+    else
+      redirect_to new_wishlist_url, notice: @user.errors[:username].first
+    end
   end
 
   # PATCH/PUT /wishlists/1
@@ -72,8 +71,7 @@ class WishlistsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def wishlist_params
-    params.require(:wishlist).permit(:name, :price, 
-      :groups_ids => [:id, :icon]
-    )  
+    params.require(:wishlist).permit(:name, :price,
+                                     groups_ids: %i[id icon])
   end
 end
