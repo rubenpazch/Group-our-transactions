@@ -1,6 +1,5 @@
 FactoryBot.define do
-  factory :user do
-    username { Faker::Alphanumeric.alpha(number: 10) }
-    # name { Faker::Name.name }
-  end
+  # factory :user do
+  #   username { "Carlos" }
+  # end
 end
