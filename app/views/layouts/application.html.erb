@@ -25,8 +25,8 @@
                   <li><div class="icon-user"> <i class="fas fa-user"></i></div></li>      
                   <li class="text-center "><%= current_user.username %> | <%= link_to 'Edit', edit_user_path(current_user) %></li>
                   <li class="border-bottom border-secondary"> <br> </li>
-                  <li class="border-bottom border-secondary"> <%= link_to "All my transactions", wishlists_path, class: "nav-link active", method: 'get' %></li>
-                  <li class="border-bottom border-secondary"> <%= link_to "All my external transactions ", external_wishlists_path, class: "nav-link active", method: 'get' %></li>
+                  <li class="border-bottom border-secondary"> <%= link_to "All my wishlist", wishlists_path, class: "nav-link active", method: 'get' %></li>
+                  <li class="border-bottom border-secondary"> <%= link_to "All my external wishlist ", external_wishlists_path, class: "nav-link active", method: 'get' %></li>
                   <li class="border-bottom border-secondary"> <%= link_to "All groups", groups_path, class: "nav-link active", method: 'get' %></li>
                   <li>  </li>
               </ul>              
