@@ -1,10 +1,6 @@
-      
-        <%= form_with( url: login_path, local: true) do |f| %>
-        <ul class="login-items">
-          <li><h1>Sign in</h1></li>
-          <li><%= f.label :username %></li>
-          <li><%= f.text_field :username, class: 'form-control' %></li>
-          <li><br></li>
-          <li><%= f.submit "Log in", class: "btn btn-success" %><%= link_to "sign up?", signup_path, class: "sign-up-link" %></li>
-        </ul>
-        <% end %>
+<br>
+<h1>Groups our wishlists</h1>
+<p>The current project was build with Ruby on Rails is a capstone based on an app for grouping payments by goal with your family/friends. This project is customized to manage group wishlists, a wishlist is some product or article you are interesting and you would like to save this on your dashboard for future references, for this is saved the price and also you can manage a list of your different preferences during the time you are interacting with a marketplace. </p>
+
+<%= link_to "sign in?", login_path, class: "sign-up-link" %>
+<%= link_to "sign up?", signup_path, class: "sign-up-link" %>
