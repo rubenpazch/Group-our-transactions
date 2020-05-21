@@ -6,8 +6,7 @@ class Wishlist < ApplicationRecord
   validates :name,
             presence: { message: 'Name must be given' },
             length: { in: 6..50, message: 'Name length must be between 6 to 50 characters' },
-            uniqueness: { message: 'Name already exists' },
-            format: { with: /\A[a-zA-Z0-9]+\z/, message: 'Name must be alphanumeric' }
+            uniqueness: { message: 'Name already exists' }            
 
   validates :price,
             presence: { message: 'Price must be given' },

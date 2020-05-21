@@ -32,12 +32,7 @@ RSpec.describe Group, type: :model do
         groups(:one).name = ''
         groups(:one).valid?
         expect(groups(:one).errors[:name]).to include('Group name length must be between 1 to 50 characters')
-      end
-      it 'must be alphanumeric' do
-        groups(:one).name = ' ruben22123123'
-        groups(:one).valid?
-        expect(groups(:one).errors[:name]).to include('Group name must be alphanumeric')
-      end
+      end      
     end
   end
 end
