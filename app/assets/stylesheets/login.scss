@@ -1,24 +1,7 @@
-.login{
-    background-color: #fff;
-    width: 100vw;
-}
-
-.login-wrapper{    
-    height: 100vh;
-}
-
-.login-form {    
-    width: 20vw;
-    height: 30vh;
-}
-
-.login-form a{
-    color: #000;
-}
-
 .login-items {
     padding: 0;
     margin: 0;
+    width: 80%;
 }
 
 .login-items li{
@@ -27,4 +10,10 @@
 
 .sign-up-link{
     padding-left: 10px;
+}
+
+.login-session-form{
+    padding-top: 30%;    
+    padding-left: 50%;
+    width: 100%;
 }

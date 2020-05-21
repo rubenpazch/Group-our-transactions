@@ -41,7 +41,8 @@ RSpec.describe '/groups', type: :request do
 
   describe 'GET /new' do
     it 'renders a successful response' do
-      get new_group_url
+      group = Group.create! valid_attributes
+      get new_group_url(group)
       expect(response).to be_successful
     end
   end

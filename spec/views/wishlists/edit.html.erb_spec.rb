@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'wishlists/edit', type: :view do
+  fixtures :wishlists
+  fixtures :groups
+
   before(:each) do
-    @wishlist = assign(:wishlist, Wishlist.create!(
-                                    name: 'MyString',
-                                    price: 1
-                                  ))
+    @group = assign(:group, [groups(:one), groups(:two)])
+    @group_added = assign(:group, [])
+    @wishlist = assign(:wishlist, wishlists(:one))
   end
 
   it 'renders the edit wishlist form' do

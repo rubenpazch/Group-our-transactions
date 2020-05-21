@@ -1,0 +1,15 @@
+one: 
+  id: 1
+  name: "Magpies"
+  icon: "fab fa-500px"
+  user_id: 1
+two: 
+  id: 2
+  name: "Cocodrilles"
+  icon: "fab fa-accusoft"
+  user_id: 1
+three: 
+  id: 3
+  name: "Ducks"
+  icon: "fab fa-acquisitions-incorporated"
+  user_id: 1
