@@ -40,7 +40,7 @@ class GroupsController < ApplicationController
     @group.icon = params[:icon]
     if @group.update(group_params)
       redirect_to groups_path, notice: 'Group was successfully updated.'
-    else      
+    else
       redirect_to edit_group_url, notice: @group.errors[:name].first
     end
   end

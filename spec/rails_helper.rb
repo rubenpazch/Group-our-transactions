@@ -93,5 +93,5 @@ RSpec.configure do |config|
   #  DatabaseCleaner.clean
   # end
 
-  # config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include SessionsHelper, type: :controller
 end
