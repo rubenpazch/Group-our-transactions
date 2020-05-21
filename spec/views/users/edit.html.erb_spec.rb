@@ -1,10 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'users/edit', type: :view do
+  fixtures :users
+
   before(:each) do
-    @user = assign(:user, User.create!(
-                            username: 'MyString'
-                          ))
+    @user = assign(:user, users(:one))
   end
 
   it 'renders the edit user form' do

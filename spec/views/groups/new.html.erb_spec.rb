@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'groups/new', type: :view do
+
+  fixtures :groups
+
   before(:each) do
-    @group = assign(:group, Group.create!(
-                     name: 'MyString',
-                     icon: 'MyString',
-                     user_id: 1
-                   ))
+    @group = assign(:group, groups(:one))
     
   end
 
