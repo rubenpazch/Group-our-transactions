@@ -32,7 +32,7 @@ RSpec.describe Group, type: :model do
         groups(:one).name = ''
         groups(:one).valid?
         expect(groups(:one).errors[:name]).to include('Group name length must be between 1 to 50 characters')
-      end      
+      end
     end
   end
 end

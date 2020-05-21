@@ -14,7 +14,7 @@ class WishlistsController < ApplicationController
   end
 
   def group_wishlists
-    @group = Group.find(params[:id])    
+    @group = Group.find(params[:id])
     @wishlists = @group.wishlists
     @total = total_amount_on_external(@wishlists)
   end

@@ -30,7 +30,7 @@ RSpec.describe Wishlist, type: :model do
         wishlists(:one).name = ''
         wishlists(:one).valid?
         expect(wishlists(:one).errors[:name]).to include('Name length must be between 6 to 50 characters')
-      end      
+      end
       it 'must be numeric' do
         wishlists(:one).price = 'gffgf'
         wishlists(:one).valid?
