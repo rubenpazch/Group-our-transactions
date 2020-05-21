@@ -9,7 +9,7 @@ RSpec.describe 'groups/show', type: :view do
                             ))
   end
 
-  it 'renders attributes in <p>' do
+  it 'renders content' do
     render
     expect(rendered).to match(/Name1/)
     expect(rendered).to match(/fab fa-500px/)
