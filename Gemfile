@@ -41,6 +41,7 @@ gem 'jquery-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -53,7 +54,7 @@ group :development do
   # Use Faker for sample data
   gem 'faker', '2.11.0'
   # Use for testing
-  gem 'rails-controller-testing'
+  
   gem 'rspec-rails'
   gem 'rubocop'
   # Adds support for Capybara system testing and selenium driver
