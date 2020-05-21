@@ -9,6 +9,6 @@ RSpec.describe 'users/show', type: :view do
 
   it 'renders attributes in <p>' do
     render
-    expect(rendered).to match("carlospaz")    
+    expect(rendered).to match(/carlospaz/)    
   end
 end

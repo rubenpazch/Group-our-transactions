@@ -1,17 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe 'wishlists/new', type: :view do
+  fixtures :wishlists
+  fixtures :groups
+
   before(:each) do
-    assign(:wishlist, Wishlist.new(
-                        name: 'MyString',
-                        price: 1
-                      ))
+    @group =  assign(:group, [groups(:one),groups(:two)])
+    @group_added =  assign(:group, [])
+    @wishlist =  assign(:wishlist, wishlists(:one))
   end
 
   it 'renders new wishlist form' do
     render
 
-    assert_select 'form[action=?][method=?]', wishlists_path, 'post' do
+    assert_select 'form[action=?][method=?]', wishlist_path(@wishlist), 'post' do
       assert_select 'input[name=?]', 'wishlist[name]'
 
       assert_select 'input[name=?]', 'wishlist[price]'
