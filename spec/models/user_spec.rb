@@ -45,7 +45,7 @@ RSpec.describe User, type: :model do
         users(:one).valid?
         expect(users(:one).errors[:username]).to include('Username must be alphanumeric')
       end
-    end    
+    end
 
     context 'validates methods' do
       it 'has none to begin with' do

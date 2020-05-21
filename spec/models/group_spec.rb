@@ -20,8 +20,8 @@ RSpec.describe Group, type: :model do
         expect(groups(:one)).to_not be_valid
       end
 
-      it 'validates user already exists' do
-        group_new = Group.new(name: 'Magpies', icon: "fab fa-500px", user_id: 1)
+      it 'validates group name already exists' do
+        group_new = Group.new(name: 'Magpies', icon: 'fab fa-500px', user_id: 1)
         group_new.valid?
         expect(group_new.errors[:name]).to include('Group name already exists')
       end
@@ -38,6 +38,6 @@ RSpec.describe Group, type: :model do
         groups(:one).valid?
         expect(groups(:one).errors[:name]).to include('Group name must be alphanumeric')
       end
-    end   
+    end
   end
 end

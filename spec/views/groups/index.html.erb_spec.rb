@@ -4,14 +4,14 @@ RSpec.describe 'groups/index', type: :view do
   before(:each) do
     assign(:groups, [
              Group.create!(
-               name: 'Name',
+               name: 'Name1',
                icon: 'Icon',
-               user: nil
+               user_id: 1
              ),
              Group.create!(
-               name: 'Name',
+               name: 'Name2',
                icon: 'Icon',
-               user: nil
+               user_id: 1
              )
            ])
   end
