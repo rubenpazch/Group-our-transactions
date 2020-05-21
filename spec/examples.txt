@@ -37,4 +37,4 @@ example_id                                      | status  | run_time        |
 ./spec/views/groups/edit.html.erb_spec.rb[1:1]  | failed  | 0.14738 seconds |
 ./spec/views/groups/index.html.erb_spec.rb[1:1] | passed  | 0.06605 seconds |
 ./spec/views/groups/new.html.erb_spec.rb[1:1]   | failed  | 0.03906 seconds |
-./spec/views/groups/show.html.erb_spec.rb[1:1]  | failed  | 0.04113 seconds |
+./spec/views/groups/show.html.erb_spec.rb[1:1]  | passed  | 0.07124 seconds |
