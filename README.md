@@ -1,26 +1,134 @@
-# README
+# Group our Wishlist   
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The project you are going to build for the Ruby on Rails capstone is based on an app for grouping payments by goal with your family/friends. You should change the theme of the app though - it can be for grouping hours spent on different projects at your university or for grouping kilometers by means of transportations in your family - anything that you can share with other people and group by some category. You should follow the given design of the website.
 
-Things you may want to cover:
 
-* Ruby version
+---
 
-* System dependencies
 
-* Configuration
+## Table of Contents (Optional)
 
-* Database creation
+> If your `README` has a lot of info, section headers might be nice.
 
-* Database initialization
+- [Prerequisites](##Prerequisites)
+- [Installation](#Installing)
+- [Watch the live version](#Watch-the-live-version)
+- [Contributing](#Contributing)
+- [Team](#authors)
+- [License](#license)
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
 
-* ...
+### Getting Started
 
-* try to deploy
+This project was built using Ruby and Rails version 6, it is a web application and for running on your local environment you should follow these guidelines.
+
+### Prerequisites
+
+- ruby 2.6.5
+- rails 6.0.3
+- bootstrap 
+- jquery
+- faker
+- factory bot
+- git
+
+## Tools used on this project
+
+- Visual Studio Code
+- VSCode Ruby by Stafford Brunk
+- Rubocop for Visual Studio Code
+
+## The project
+
+this project can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or you just can clone the project using this command 
+
+
+
+```
+# git clone  git@github.com:rubenpazch/Group-our-transactions.git
+```
+
++ Open terminal on your workspace with
+
+```
+cd /home/project_folder/..
+```
+
+### Installing
+
+
+To get started with the app, clone the repo and then install the needed gems:
+
+```
+# bundle install --without production
+```
+
+Next, migrate the database:
+
+```
+# rails db:migrate
+```
+
+Finally, run the test suite to verify that everything is working correctly:
+
+```
+# bundle exec rspec
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+```
+$ rails server
+```
+
+
+
+
+## Watch the live version
+
+
+click on the link to watch [live version](#)
+
+<iframe src="https://giphy.com/embed/JrqfCFT6YfVRmlleyh" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/JrqfCFT6YfVRmlleyh">via GIPHY</a></p>
+
+
+
+
+## Contributing
+
+contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](https://github.com/rubenpazch/Group-our-transactions/issues).
+
+1. fork it (https://github.com/rubenpazch/Group-our-transactions/develop/fork)
+2. create your working branch (git checkout -b [choose-a-name])
+3. commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. push to the branch (git push origin [chosen-name])
+5. create a new pull request
+
+
+
+
+## Authors
+
+👤 **Ruben Paz Chuspe**
+
+- Github: [@rubenpazch](https://github.com/rubenpazch)
+- Linkedin: [rubenpch](https://www.linkedin.com/in/rubenpch/)
+
+
+### Show your support
+
+Give a ⭐️ if you like this project!
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+* etc

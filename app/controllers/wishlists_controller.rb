@@ -47,7 +47,7 @@ class WishlistsController < ApplicationController
       end
       redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
     else
-      redirect_to new_wishlist_url, notice: @user.errors[:username].first
+      redirect_to new_wishlist_url, notice: @wishlist.errors[:name].first
     end
   end
 
