@@ -41,7 +41,8 @@ RSpec.describe '/wishlists', type: :request do
 
   describe 'GET /new' do
     it 'renders a successful response' do
-      get new_wishlist_url
+      wishlist = Wishlist.create! valid_attributes
+      get new_wishlist_url(wishlist)
       expect(response).to be_successful
     end
   end
