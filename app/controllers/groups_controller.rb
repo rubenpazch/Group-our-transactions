@@ -37,14 +37,16 @@ class GroupsController < ApplicationController
   # PATCH/PUT /groups/1
   # PATCH/PUT /groups/1.json
   def update
-    respond_to do |format|
-      if @group.update(group_params)
-        format.html { redirect_to @group, notice: 'Group was successfully updated.' }
-        format.json { render :show, status: :ok, location: @group }
-      else
-        format.html { render :edit }
-        format.json { render json: @group.errors, status: :unprocessable_entity }
-      end
+    @group.icon = params[:icon]
+    if @group.update(group_params)
+
+      # format.html { redirect_to @group, notice: 'Group was successfully updated.' }
+      # format.json { render :show, status: :ok, location: @group }
+      redirect_to groups_path, notice: 'Group was successfully updated.'
+    else
+      # format.html { render :edit }
+      # format.json { render json: @group.errors, status: :unprocessable_entity }
+      redirect_to edit_group_url, notice: @group.errors[:name].first
     end
   end
 

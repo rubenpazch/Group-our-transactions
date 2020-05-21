@@ -25,9 +25,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to @user, notice: 'User was successfully created.'
+      log_in @user
+      redirect_to wishlists_path, notice: 'User was successfully created.'
     else
-      redirect_to signup_url, notice: @user.errors[:username].first
+      redirect_to signup_path, notice: @user.errors[:username].first
     end
   end
 
