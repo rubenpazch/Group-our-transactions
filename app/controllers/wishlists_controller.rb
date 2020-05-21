@@ -1,7 +1,7 @@
 class WishlistsController < ApplicationController
   before_action :logged_in_user
   before_action :set_wishlist, only: %i[show edit update destroy]
-
+  include WishlistsHelper
   # GET /wishlists
   # GET /wishlists.json
   def index
@@ -10,6 +10,7 @@ class WishlistsController < ApplicationController
 
   def list_external
     @wishlists = current_user.list_wishlists_join_groups
+    @total = total_amount_on_external(@wishlists)
   end
 
   def group_wishlists

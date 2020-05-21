@@ -1,7 +1,7 @@
 <br>
 <div class="d-flex justify-content-between align-items-end pl-2">
   <div>Gift credit</div>
-  <div><%=  number_to_currency(current_user.all_total_amount, precision: 2)   %></div>
+  <div><%=  number_to_currency(@total, precision: 2)   %></div>
   <div><%= link_to "New",  new_wishlist_path, class: "btn btn-success" %> </div>      
 </div>    
 <br>
