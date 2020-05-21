@@ -90,7 +90,7 @@ $ rails server
 ## Watch the live version
 
 
-click on the link to watch [live version](#)
+click on the link to watch [live version](https://morning-taiga-75196.herokuapp.com/)
 
 
 ![Preview](/Hnet-image.gif)
