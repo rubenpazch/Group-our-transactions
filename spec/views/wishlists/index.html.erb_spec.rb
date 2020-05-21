@@ -6,7 +6,7 @@ RSpec.describe 'wishlists/index', type: :view do
 
   before(:each) do
     assign(:current_user, users(:one))
-    assign(:wishlists, [wishlists(:one),wishlists(:two)])
+    assign(:wishlists, [wishlists(:one), wishlists(:two)])
   end
 
   it 'renders a list of wishlists' do

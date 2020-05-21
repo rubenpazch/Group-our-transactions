@@ -5,7 +5,7 @@ RSpec.describe 'users/index', type: :view do
   fixtures :wishlists
 
   before(:each) do
-    assign(:users, [users(:one),users(:two)])
+    assign(:users, [users(:one), users(:two)])
   end
 
   it 'renders a list of users' do

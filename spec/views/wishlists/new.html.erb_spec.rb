@@ -5,9 +5,9 @@ RSpec.describe 'wishlists/new', type: :view do
   fixtures :groups
 
   before(:each) do
-    @group =  assign(:group, [groups(:one),groups(:two)])
-    @group_added =  assign(:group, [])
-    @wishlist =  assign(:wishlist, wishlists(:one))
+    @group = assign(:group, [groups(:one), groups(:two)])
+    @group_added = assign(:group, [])
+    @wishlist = assign(:wishlist, wishlists(:one))
   end
 
   it 'renders new wishlist form' do

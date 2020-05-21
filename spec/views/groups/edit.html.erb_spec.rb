@@ -7,14 +7,13 @@ RSpec.describe 'groups/edit', type: :view do
     @group = assign(:group, groups(:one))
   end
 
-  it 'renders the edit group form' do    
-    render    
+  it 'renders the edit group form' do
+    render
     assert_select 'form[action=?][method=?]', group_path(@group), 'post' do
-      assert_select 'input[name=?]', 'group[name]'    
-       
+      assert_select 'input[name=?]', 'group[name]'
     end
   end
-  
+
   it 'renders content' do
     render
     expect(rendered).to match(/Magpies/)

@@ -54,7 +54,7 @@ group :development do
   # Use Faker for sample data
   gem 'faker', '2.11.0'
   # Use for testing
-  
+
   gem 'rspec-rails'
   gem 'rubocop'
   # Adds support for Capybara system testing and selenium driver
