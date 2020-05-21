@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :wishlist do
-    name { 'wish list x' }
+    name { Faker::Alphanumeric.alphanumeric(number: 10) }
     price { 5 }
-    association :author, factory: :user
+    author_id { 1 }
   end
 end
