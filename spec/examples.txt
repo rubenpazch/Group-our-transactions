@@ -92,9 +92,9 @@ example_id                                         | status  | run_time        |
 ./spec/views/groups/index.html.erb_spec.rb[1:1]    | passed  | 0.00906 seconds |
 ./spec/views/groups/new.html.erb_spec.rb[1:1]      | failed  | 0.17204 seconds |
 ./spec/views/groups/show.html.erb_spec.rb[1:1]     | passed  | 0.02835 seconds |
-./spec/views/users/edit.html.erb_spec.rb[1:1]      | passed  | 0.00701 seconds |
-./spec/views/users/index.html.erb_spec.rb[1:1]     | failed  | 0.02643 seconds |
-./spec/views/users/new.html.erb_spec.rb[1:1]       | passed  | 0.00914 seconds |
+./spec/views/users/edit.html.erb_spec.rb[1:1]      | failed  | 0.15933 seconds |
+./spec/views/users/index.html.erb_spec.rb[1:1]     | passed  | 0.05395 seconds |
+./spec/views/users/new.html.erb_spec.rb[1:1]       | failed  | 0.16005 seconds |
 ./spec/views/users/show.html.erb_spec.rb[1:1]      | failed  | 0.00719 seconds |
 ./spec/views/wishlists/edit.html.erb_spec.rb[1:1]  | failed  | 0.14009 seconds |
 ./spec/views/wishlists/index.html.erb_spec.rb[1:1] | failed  | 0.00769 seconds |
