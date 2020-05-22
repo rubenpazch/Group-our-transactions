@@ -6,6 +6,7 @@
 @import 'login';
 @import 'profile';
 @import 'all_transactions';
+@import 'home';
 
 @font-face {
     font-family: 'proximanova';
@@ -21,9 +22,20 @@ body{
 }
 
 a {
-    color: #fff;
+    color: #000;
 }
 
 a:hover {
     color: #000;
+}
+
+.main-wrapper {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    background-color: #fff;   
+    min-height: 100vh;
 }
