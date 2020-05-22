@@ -13,3 +13,31 @@ nav {
     padding: 5px 0 0 0; 
     margin: 0;   
 }
+
+.nav-top-bar{
+    padding: 0 0 0  0;
+    margin: 0 0 0 -15px ;
+    width: 100vw;
+    height: 7vh;
+    font-size: 2.5rem;
+
+}
+
+.nav-top-bar a{
+    color: #fff;
+}
+
+.nav-top-bar h1{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.link-back{
+    padding-left: 30px;
+}
+
+.link-login-submit{
+    padding-right: 30px;
+    color: #fff;
+    font-size: 2.5rem;
+}
