@@ -5,7 +5,7 @@ class WishlistsController < ApplicationController
   # GET /wishlists
   # GET /wishlists.json
   def index
-    @wishlists = current_user.wishlists_order_recent
+    @wishlists = current_user.wishlists_order_recent    
   end
 
   def list_order_ancient

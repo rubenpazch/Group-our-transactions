@@ -51,3 +51,31 @@
     word-wrap: break-word;
     max-width: 40vw;
 }
+
+.select-list-groups{
+    font-size: 2.0rem;
+    padding: 6px 30px;
+    margin-left: 12px;
+    background-color: white;
+    border: thin solid grey;
+    border-radius: 4px;
+    display: inline-block;
+    
+    line-height: 1.5em;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;    
+}
+
+.select-list-groups.arrows {    
+    background-position: calc(100% - .5rem), 100% 0;
+    background-size:  1.5em 1.5em;
+    background-repeat: no-repeat;
+  }
+  .select-list-groups.arrows:focus {
+    
+    outline: 0;
+  }
