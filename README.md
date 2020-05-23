@@ -2,7 +2,6 @@
 
 The project you are going to build for the Ruby on Rails capstone is based on an app for grouping payments by goal with your family/friends. You should change the theme of the app though - it can be for grouping hours spent on different projects at your university or for grouping kilometers by means of transportations in your family - anything that you can share with other people and group by some category. You should follow the given design of the website.
 
-
 ---
 
 
