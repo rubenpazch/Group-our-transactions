@@ -18,10 +18,12 @@
           <td> 
             <% wishlist.groups.each do |t| %> 
               <i class="<%= t.icon %>"></i> 
+              <br>
             <% end %>
           </td>
         <% else %>
           <td> <i class="fas fa-question-circle"></i> </td>
+          <br>
         <% end%>  
     </div>
     <div class="content-wishlist">

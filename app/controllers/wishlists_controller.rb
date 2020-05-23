@@ -21,7 +21,9 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists/1
   # GET /wishlists/1.json
-  def show; end
+  def show
+    @wishlist = Wishlist.find(params[:id])
+  end
 
   # GET /wishlists/new
   def new
