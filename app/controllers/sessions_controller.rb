@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user
       log_in @user
-      redirect_to @user, notice: 'user successfully logged in.'
+      redirect_to wishlists_path, notice: 'user successfully logged in.'
     else
       redirect_to login_url, notice: 'user not found.'
     end

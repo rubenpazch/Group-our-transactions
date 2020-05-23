@@ -6,11 +6,13 @@ class WishlistsController < ApplicationController
   # GET /wishlists.json
   def index
     @wishlists = current_user.wishlists_order_recent
+    
   end
 
   def list_external
     @wishlists = current_user.list_wishlists_join_groups
     @total = total_amount_on_external(@wishlists)
+    
   end
 
   def group_wishlists

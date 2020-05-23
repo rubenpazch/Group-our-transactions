@@ -1,29 +1,30 @@
-<nav class="d-flex justify-content-between">
-  <div class="options">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Others</a>
-      </li>  
-    </ul>
+  <div class="d-flex justify-content-between  align-items-center nav-top-bar">
+    <div class="options">
+      <ul class="nav">
+        <li class="nav-item">        
+           
+            <div class="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul class="menu">
+                  <li> <%= link_to "All my wishlist", wishlists_path, class: "nav-link active", method: 'get' %></li>
+                  <li> <%= link_to "All my external wishlist ", external_wishlists_path, class: "nav-link active", method: 'get' %></li>
+                  <li> <%= link_to "All groups", groups_path, class: "nav-link active", method: 'get' %></li>
+                  <li> <%= link_to "Log out", logout_path, class: "nav-link active", method: 'delete' %></li>
+              </ul>
+            </div>
+          
+        </li>  
+      </ul>
+    </div>
+    <h1 class="title-app">  <%= navbar_page_title(yield(:navbar_page_title)) %> </h1>
+    <div class="login-nav-bar">
+      <ul class="nav">
+        <li class="nav-item">        
+          <%= link_to '<i class="fas fa-search"></i>'.html_safe, root_path, class:"link-back-nav-bar" %>
+        </li>  
+      </ul>
+    </div>
   </div>
-  <h1 class="title-app">group our wishlists</h1>
-  <div class="login-nav-bar">
-    <ul class="nav">
-      <li class="nav-item">      
-        <% if !logged_in?  %>
-        <%= link_to "Sing up ", signup_path, class: "nav-link active", method: 'get' %>
-        <% end %>
-      </li>
-      <li class="nav-item">  
-        <% if !logged_in?  %>      
-        <%= link_to "Sing in", login_path, class: "nav-link", method: 'get' %>
-        <% end %>
-      </li>
-      <li class="nav-item">   
-        <% if logged_in? %>     
-        <%= link_to "Log out", logout_path, class: "nav-link", method: 'delete' %>
-        <% end %>
-      </li>
-    </ul>
-  </div>
-</nav>

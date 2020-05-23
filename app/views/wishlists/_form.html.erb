@@ -1,44 +1,49 @@
 
 <div>
-<%= form_with(model: wishlist, local: true) do |form| %>
-  
-  <div class="field">
-    <div><%= form.label :name %></div>
-    <div><%= form.text_field :name %></div>
-  </div>
-
-  <div class="field">
-    <div><%= form.label :price %></div>
-    <div><%= form.number_field :price %></div>
-  </div>
-  
-  <div class="field">
-    <div><%= form.label :icon %></div>
-    <% @group.each do |g| %>      
-      <% if @groups_added.nil?  %>
-        <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
-      <% end %>
-      <% if @groups_added.first.nil?  %>
-        <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
-      <% else %>
-        <% if @groups_added.find_by(id: g.id)  %>
-          <%= check_box_tag 'activated[]', "wishlist[group_ids][]", g.id  %>          
-        <% else  %>
-          <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
-        <% end %>
-      <% end %>
-
-      <%= label_tag(:icon, "#{g.name}") %>
-      <i class="<%= g.icon %>"></i> 
-      <br>
-    <% end %>
-  </div>
-  
-  <div class="actions">
-    <div>
-      <br>
-      <%= form.submit %>
+  <%= form_with(model: wishlist, local: true) do |form| %>
+    
+    <div class="field">
+      <div class="form-input">
+        <%= form.text_field :name, class: 'form-control font-label-style',placeholder: "Name of the group"  %>
+      </div>
     </div>
-  </div>
-<% end %>
+
+    <div class="field">          
+      <div class="form-input">
+        <%= form.number_field :price, class: 'form-control font-label-style',placeholder: "price example:15" %>
+      </div>
+    </div>
+    <br>
+    <div><%= form.label :icon, class: "font-label-style" %></div>
+    
+    <div class="field check-input-style">      
+      <% @group.each do |g| %>      
+        <div class="check-item-style">
+          <% if @groups_added.nil?  %>
+            <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+          <% end %>
+          <% if @groups_added.first.nil?  %>
+            <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+          <% else %>
+            <% if @groups_added.find_by(id: g.id)  %>
+              <%= check_box_tag 'activated[]', "wishlist[group_ids][]", g.id  %>          
+            <% else  %>
+              <%= check_box_tag "wishlist[group_ids][]", g.id  %>          
+            <% end %>
+          <% end %>
+
+          <%= label_tag(:icon, "#{g.name}", class: "font-label-style") %>
+          <i class="<%= g.icon %> icon-size-group"></i> 
+        </div>
+      <% end %>
+    </div>
+    
+    <div class="actions">
+      <div>        
+        
+        <%= form.submit "Save", class: "btn new-wishlist-button" %>
+        
+      </div>
+    </div>
+  <% end %>
 </div>

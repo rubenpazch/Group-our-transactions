@@ -1,3 +1,31 @@
-<div class="login-session-form">            
-    <%= render 'form', user: @user %>            
-</div>
+<%= form_with(model: @user, local: true) do |form| %>  
+  <nav class="d-flex justify-content-between  align-items-center nav-top-bar">
+    <div class="options">
+      <ul class="nav">
+        <li class="nav-item">        
+          <%= link_to '<i class="fas fa-chevron-left"></i>'.html_safe, root_path, class:"link-back" %>
+        </li>  
+      </ul>
+    </div>
+    <h1 class="title-app">REGISTER</h1>
+    <div class="login-nav-bar">
+      <ul class="nav">
+        <li class="nav-item">      
+          <%= form.submit "Next", class: "btn btn-link link-login-submit" %>
+        </li>      
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="login-items">
+    <li><br></li>
+    <li><div class="icon-user"> 
+            <div class="circle-profile"> <i class="fas fa-user"></i> </div> 
+            <p> Upload picture </p> 
+        </div>
+    </li>
+    <li><%= form.text_field :username, class: 'form-control',placeholder: "username" %></li>
+    <li><br></li>
+    
+  </ul>
+<% end %>

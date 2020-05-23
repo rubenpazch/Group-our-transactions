@@ -1,6 +1,9 @@
-<br>
-<h1>Groups our wishlists</h1>
-<p>The current project was build with Ruby on Rails is a capstone based on an app for grouping payments by goal with your family/friends. This project is customized to manage group wishlists, a wishlist is some product or article you are interesting and you would like to save this on your dashboard for future references, for this is saved the price and also you can manage a list of your different preferences during the time you are interacting with a marketplace. </p>
-
-<%= link_to "sign in?", login_path, class: "sign-up-link" %>
-<%= link_to "sign up?", signup_path, class: "sign-up-link" %>
+<section class="row container-home justify-content-md-center">
+    <div class="col-12 title-home row justify-content-md-center align-items-center"> 
+        <h1>Groups our wishlist</h1>
+    </div>
+    <div class="col-12 login-home ">
+        <%= button_to "SIGN IN", login_path, :class => "btn btn-custom-login", :method => :get %>
+        <%= button_to "SIGN UP", signup_path, :class => "btn btn-custom-signup", :method => :get %>
+    </div>    
+</section>
