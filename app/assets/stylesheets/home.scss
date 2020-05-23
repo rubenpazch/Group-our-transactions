@@ -23,7 +23,7 @@
     background-color: #3778c2;
     color: #fff;
     width: 90vw;
-    height: 5vh;
+    height: 10vh;
     font-size: 2.5rem;
 }
 
@@ -31,8 +31,47 @@
     background-color: #fff;
     color: #434b54;
     width: 90vw;
-    height: 5vh;
+    height: 10vh;
     font-size: 2.5rem;
     padding-top: 30px;
     
+}
+
+@media (max-width: 767px) {
+    .btn-custom-login{
+        background-color: #3778c2;
+        color: #fff;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+    }
+    
+    .btn-custom-signup{
+        background-color: #fff;
+        color: #434b54;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
+}
+@media (max-width: 991px) {
+    .btn-custom-login{
+        background-color: #3778c2;
+        color: #fff;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+    }
+    
+    .btn-custom-signup{
+        background-color: #fff;
+        color: #434b54;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
 }
