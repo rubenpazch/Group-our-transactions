@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get     '/external_wishlists',  to: 'wishlists#list_external'
   get     '/group_wishlists',  to: 'wishlists#group_wishlists'
   get     '/list_order_ancient',  to: 'wishlists#list_order_ancient'
+  get     '/checkout',  to: 'wishlists#checkout'
 
   # users
   get     '/signup',  to: 'users#new'

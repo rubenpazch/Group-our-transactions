@@ -2,15 +2,13 @@ class WishlistsController < ApplicationController
   before_action :logged_in_user
   before_action :set_wishlist, only: %i[show edit update destroy]
   include WishlistsHelper
-  # GET /wishlists
-  # GET /wishlists.json
+
   def index
     @wishlists = current_user.wishlists_order_recent    
   end
 
   def list_order_ancient
-    @wishlists = current_user.wishlists_order_ancient
-    #@wishlists = current_user.wishlists_order_ancient
+    @wishlists = current_user.wishlists_order_ancient    
   end
 
   def list_external
@@ -23,28 +21,26 @@ class WishlistsController < ApplicationController
     @wishlists = @group.wishlists
     @total = total_amount_on_external(@wishlists)
   end
-
-  # GET /wishlists/1
-  # GET /wishlists/1.json
+  
   def show
     @wishlist = Wishlist.find(params[:id])
   end
 
-  # GET /wishlists/new
+  def checkout
+    @wishlist = Wishlist.find(params[:id])
+  end
+
   def new
     @groups_added = []
     @wishlist = Wishlist.new
     @group = Group.all
   end
 
-  # GET /wishlists/1/edit
   def edit
     @group = Group.all
     @groups_added = Wishlist.find(params[:id]).groups
   end
 
-  # POST /wishlists
-  # POST /wishlists.json
   def create
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.author_id = current_user.id
@@ -60,8 +56,6 @@ class WishlistsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /wishlists/1
-  # PATCH/PUT /wishlists/1.json
   def update
     @groups_ids = params[:wishlist][:group_ids]
 
@@ -81,8 +75,6 @@ class WishlistsController < ApplicationController
     end
   end
 
-  # DELETE /wishlists/1
-  # DELETE /wishlists/1.json
   def destroy
     @wishlist.destroy
     respond_to do |format|
@@ -93,12 +85,10 @@ class WishlistsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_wishlist
     @wishlist = Wishlist.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def wishlist_params
     params.require(:wishlist).permit(:name, :price,
                                      groups_ids: %i[id icon])

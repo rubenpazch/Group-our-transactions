@@ -31,11 +31,13 @@
 }
 .icon-wishlist{
     font-size: 3rem;
-    padding: 0 0 0 30px;    
+    padding: 0 0 0 30px;
+    min-width: 15vw;    
 }
 .icon-wishlist a:hover{
     font-size: 3.5rem;
     font-weight: 600;
+    
 }
 
 .price-wishlist{
@@ -46,10 +48,16 @@
 .content-wishlist{
     color: #878a8f;
     margin: 0 0 0 -165px;  
+    
 }
 .content-wishlist h2{
     word-wrap: break-word;
     max-width: 40vw;
+}
+
+.pay-wishlist input{       
+    font-size: 1.5rem;
+    background-color: #5fb523;
 }
 
 .select-list-groups{
