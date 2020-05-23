@@ -11,7 +11,7 @@
 
   <body>
     <% if logged_in?  %>
-    <%= render 'layouts/navbar'  %>    
+      <%= render 'layouts/navbar'  %>    
     <% end  %>              
     <% flash.each do |message_type, message| %>
        <div class="alert alert-info message-style"><%= message %></div>

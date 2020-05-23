@@ -1,5 +1,9 @@
-.nav {
+.nav-login {
     background-color: #2b5f9a;
+}
+
+.nav-login li{
+    list-style: none;
 }
 
 nav {
@@ -45,3 +49,19 @@ nav {
 .message-style{
     font-size: 2.5rem;;
 }
+
+
+  
+  .top-bar-md {
+    position: relative;
+  }
+  
+  .ham-bars {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: block;
+    top: 10px;
+    left: 20px;
+  }
+  
