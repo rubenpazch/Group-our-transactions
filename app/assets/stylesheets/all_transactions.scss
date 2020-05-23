@@ -1,0 +1,45 @@
+.options-order{
+    background-color: #3778c2;
+    min-height: 5vh;
+    width: 100vw;
+    margin-left: -15px;    
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.options-order a{
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.gitf-style{
+    font-size: 2.5rem;
+    padding: 30px 15px 30px 15px;
+    border-bottom: 1px solid #878a8f;
+}
+
+.item-wishlist {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px 15px 30px;
+    background-color: #fff;
+    margin: 25px 5px 0 5px;
+}
+.icon-wishlist{
+    font-size: 3rem;
+    padding: 0 0 0 30px;
+    
+}
+.price-wishlist{
+    font-size: 2rem;
+    
+}
+
+.content-wishlist{
+    color: #878a8f;
+    margin: 0 0 0 -165px; 
+}
