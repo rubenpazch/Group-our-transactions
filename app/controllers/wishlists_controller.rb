@@ -8,6 +8,11 @@ class WishlistsController < ApplicationController
     @wishlists = current_user.wishlists_order_recent
   end
 
+  def list_order_ancient
+    @wishlists = current_user.wishlists_order_ancient
+    #@wishlists = current_user.wishlists_order_ancient
+  end
+
   def list_external
     @wishlists = current_user.list_wishlists_join_groups
     @total = total_amount_on_external(@wishlists)

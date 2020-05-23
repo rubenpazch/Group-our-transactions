@@ -2,12 +2,12 @@
 
 <div class="options-order">
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-  <div><%= link_to 'Most recent', root_path, class:"btn btn-link link-login-submit" %></div>
-  <div><%= link_to 'Most ancient', root_path, class:"btn btn-link link-login-submit" %></div>
+  <div><%= link_to 'Most recent', groups_path, class:"btn btn-link link-login-submit" %></div>
+  <div><%= link_to 'Most ancient', groups_path, class:"btn btn-link link-login-submit" %></div>
 </div>
 <div class="d-flex justify-content-between align-items-end  gitf-style">
   <div>Gift credit</div>
-  <div><%=  number_to_currency(current_user.all_total_amount, precision: 2)   %></div>
+  <div><%=  number_to_currency(@total, precision: 2)   %></div>
 </div>    
 <br>
 

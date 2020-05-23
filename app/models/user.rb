@@ -22,4 +22,8 @@ class User < ApplicationRecord
   def wishlists_order_recent
     wishlists.order(created_at: :desc)
   end
+  
+  def wishlists_order_ancient
+    wishlists.order(:created_at)
+  end
 end

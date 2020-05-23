@@ -45,5 +45,9 @@
 
 .content-wishlist{
     color: #878a8f;
-    margin: 0 0 0 -165px; 
+    margin: 0 0 0 -165px;  
+}
+.content-wishlist h2{
+    word-wrap: break-word;
+    max-width: 40vw;
 }
