@@ -1,33 +1,21 @@
-<br>
-<div class="d-flex justify-content-between align-items-end pl-2">
-  <div>List groups</div>
-  <div></div>
-  <div><%= link_to "New",  new_group_path, class: "btn btn-success" %> </div>  
-</div>    
-<br>
+<% provide(:navbar_page_title, "all my groups") %>
+<div class="options-order">
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div><%= link_to 'Most recient', root_path, class:"btn btn-link link-login-submit" %></div>
+  <div><%= link_to 'Most ancient', root_path, class:"btn btn-link link-login-submit" %></div>
+</div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Icon</th>
-      <th scope="col">User</th>
-      <th scope="col">Created at</th>
-      <th scope="col" colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @groups.each do |group| %>
-      <tr>
-        <td scope="row"><%= link_to group.name, group_wishlists_path(:id => group.id) %></td>
-        <td scope="row"><i class="<%= group.icon %>"></i> </td>
-        <td scope="row"><%= group.creator.username %></td>
-        <td scope="row"><%= group.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></td>
-        <td scope="row"><%= link_to 'Show', group %></td>
-        <td scope="row"><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td scope="row"><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br>
+<% @groups.each do |group| %>
+  <div class="item-wishlist">
+    <div class="icon-wishlist">
+      <%= link_to "<i class='#{ group.icon }'></i>".html_safe,  group_wishlists_path(:id => group.id) %>
+    </div>
+    <div class="content-wishlist">
+      <h2><%= link_to group.name, group %></h2>      
+      <h3><%= group.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></h3>
+    </div>
+    <div class="price-wishlist"><%= group.creator.username %></div>
+  </div>
+<% end %>
+<%= button_to "New", new_group_path,  :class => "btn new-wishlist-button", :method => :get %>

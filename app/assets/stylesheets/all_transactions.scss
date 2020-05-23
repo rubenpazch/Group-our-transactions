@@ -31,9 +31,13 @@
 }
 .icon-wishlist{
     font-size: 3rem;
-    padding: 0 0 0 30px;
-    
+    padding: 0 0 0 30px;    
 }
+.icon-wishlist a:hover{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
 .price-wishlist{
     font-size: 2rem;
     
