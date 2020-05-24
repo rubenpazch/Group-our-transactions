@@ -53,7 +53,9 @@ class WishlistsController < ApplicationController
         @wishlist.groups << Group.find(g)
       end
       redirect_to wishlists_path, notice: 'Wishlist was successfully created.'
-    else
+    elsif @wishlist.errors[:price].present?
+      redirect_to new_wishlist_url, notice: @wishlist.errors[:price].first
+    else 
       redirect_to new_wishlist_url, notice: @wishlist.errors[:name].first
     end
   end
