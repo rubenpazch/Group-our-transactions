@@ -1,7 +1,7 @@
 class GroupsController < ApplicationController
   before_action :logged_in_user
   before_action :set_group, only: %i[show edit update destroy]
-  include GroupsHelper
+
   # GET /groups
   # GET /groups.json
   def index
