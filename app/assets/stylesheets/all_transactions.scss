@@ -64,7 +64,7 @@
     font-size: 2.0rem;
     padding: 6px 30px;
     margin-left: 12px;
-    background-color: white;
+    background-color: #fff;
     border: thin solid grey;
     border-radius: 4px;
     display: inline-block;
@@ -86,4 +86,10 @@
   .select-list-groups.arrows:focus {
     
     outline: 0;
+  }
+
+  .checkout-wrapper{
+      background-color: #fff;
+      margin: 0;
+      padding: 30px 15px 0 30px;
   }
