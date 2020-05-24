@@ -9,6 +9,14 @@
               <span></span>
               <span></span>
               <ul class="menu">
+                  <li><br></li>                  
+                  <li class="nav-user-profile icon-profile">
+                    <i class="fas fa-user"></i> 
+                  </li>
+                  <li class="nav-user-profile"> 
+                    <%= current_user.username %> 
+                  </li>
+                  <li><br></li>                           
                   <li> <%= link_to "All my wishlist", wishlists_path, class: "nav-link active", method: 'get' %></li>
                   <li> <%= link_to "All my external wishlist ", external_wishlists_path, class: "nav-link active", method: 'get' %></li>
                   <li> <%= link_to "All groups", groups_path, class: "nav-link active", method: 'get' %></li>

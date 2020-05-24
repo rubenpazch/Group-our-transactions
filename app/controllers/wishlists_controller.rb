@@ -18,7 +18,7 @@ class WishlistsController < ApplicationController
 
   def group_wishlists
     @group = Group.find(params[:id])
-    @wishlists = @group.wishlists
+    @wishlists = @group.wishlists.where(active: true)
     @total = total_amount_on_external(@wishlists)
   end
 
@@ -45,6 +45,7 @@ class WishlistsController < ApplicationController
   def create
     @wishlist = Wishlist.new(wishlist_params)
     @wishlist.author_id = current_user.id
+    @wishlist.active = true
     @groups_ids = params[:wishlist][:group_ids]
 
     if @wishlist.save
