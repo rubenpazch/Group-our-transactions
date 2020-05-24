@@ -1,0 +1,21 @@
+<% provide(:navbar_page_title, "all my groups") %>
+<div class="options-order">
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div><%= link_to 'Most recient', groups_path, class:"btn btn-link link-login-submit" %></div>
+  <div><%= link_to 'Most ancient', groups_path, class:"btn btn-link link-login-submit" %></div>
+</div>
+
+<br>
+<% @groups.each do |group| %>
+  <div class="item-wishlist">
+    <div class="icon-wishlist">
+      <%= link_to "<i class='#{ group.icon }'></i>".html_safe,  group_wishlists_path(:id => group.id) %>
+    </div>
+    <div class="content-wishlist">
+      <h2><%= link_to group.name, group %></h2>      
+      <h3><%= group.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></h3>
+    </div>
+    <div class="price-wishlist"><%= group.creator.username %></div>
+  </div>
+<% end %>
+<%= button_to "New", new_group_path,  :class => "btn new-wishlist-button", :method => :get %>

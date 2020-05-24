@@ -1,0 +1,17 @@
+<% provide(:navbar_page_title, "group information") %>
+<br><br>
+<p class="font-label-style">
+  <strong>Name:</strong>
+  <%= @group.name %>
+</p>
+<p class="font-label-style">
+  <strong>Icon:</strong>  
+  <i class="<%= @group.icon %>"></i> 
+</p>
+<p class="font-label-style">
+  <strong>User:</strong>
+  <%= @group.user_id %>
+</p>
+<br><br>
+<%= link_to 'Edit', edit_group_path(@group), class: 'font-label-style link-edit-back' %> 
+<%= link_to 'Back', groups_path, class: 'font-label-style link-edit-back' %>

@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :payment do
     price { 1 }
-    transaction { "MyString" }
+    transaction { 'MyString' }
     wishlist { nil }
   end
 end

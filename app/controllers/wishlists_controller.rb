@@ -4,11 +4,11 @@ class WishlistsController < ApplicationController
   include WishlistsHelper
 
   def index
-    @wishlists = current_user.wishlists_order_recent    
+    @wishlists = current_user.wishlists_order_recent
   end
 
   def list_order_ancient
-    @wishlists = current_user.wishlists_order_ancient    
+    @wishlists = current_user.wishlists_order_ancient
   end
 
   def list_external
@@ -21,13 +21,14 @@ class WishlistsController < ApplicationController
     @wishlists = @group.wishlists
     @total = total_amount_on_external(@wishlists)
   end
-  
+
   def show
     @wishlist = Wishlist.find(params[:id])
   end
 
   def checkout
     @wishlist = Wishlist.find(params[:id])
+    @payment = Payment.new
   end
 
   def new

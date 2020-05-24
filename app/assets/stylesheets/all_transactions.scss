@@ -93,3 +93,9 @@
       margin: 0;
       padding: 30px 15px 0 30px;
   }
+  .checkout-items{
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+      align-items: center;      
+  }
