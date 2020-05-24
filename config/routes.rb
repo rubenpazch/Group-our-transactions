@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
-  resources :groups  
+  
   root 'application#home'
+  # group
+  resources :groups, only: [:index, :show, :new, :edit, :create, :update]  
+  
   
   resources :users
   get     '/external_wishlists',  to: 'wishlists#list_external'
