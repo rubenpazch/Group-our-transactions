@@ -95,6 +95,10 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 
 ## Extra feature
 
++ Click on checkout 
++ press button payment
++ Notes.- After save the payment the wishlist will disappear from the list
+
 ![Preview](/docs/checkout.png)
 ![Preview](/docs/payment.png)
 
@@ -105,7 +109,7 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 ![Preview](/docs/new.png)
 ![Preview](/docs/profile.png)
 ![Preview](/docs/login-register.png)
-![Preview](/docs/loginsave-wislist.png)
+![Preview](/docs/save-wislist.png)
 
 ## Contributing
 
