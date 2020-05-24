@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   # wishlist
-  resources :wishlists
+  resources :wishlists, only: [:index, :show, :new, :edit, :create, :update]
   get     '/external_wishlists',  to: 'wishlists#list_external'
   get     '/group_wishlists',  to: 'wishlists#group_wishlists'
   get     '/list_order_ancient',  to: 'wishlists#list_order_ancient'

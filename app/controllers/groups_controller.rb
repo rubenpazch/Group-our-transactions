@@ -30,9 +30,9 @@ class GroupsController < ApplicationController
     if @group.save
       redirect_to groups_path, notice: 'Group was successfully created.'
     elsif @group.errors[:icon].present?
-      redirect_to new_group_url, notice: @group.errors[:icon].first      
+      redirect_to new_group_url, notice: @group.errors[:icon].first
     else
-      redirect_to new_group_url, notice: @group.errors[:name].first      
+      redirect_to new_group_url, notice: @group.errors[:name].first
     end
   end
 

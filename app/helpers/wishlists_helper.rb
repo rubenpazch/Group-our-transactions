@@ -6,4 +6,19 @@ module WishlistsHelper
     end
     sum
   end
+
+  private
+
+  def set_wishlist
+    @wishlist = Wishlist.find(params[:id])
+  end
+
+  def set_group
+    @group = Group.find(params[:id])
+  end
+
+  def wishlist_params
+    params.require(:wishlist).permit(:name, :price,
+                                     groups_ids: %i[id icon])
+  end
 end

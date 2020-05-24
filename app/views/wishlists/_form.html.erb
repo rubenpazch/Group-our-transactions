@@ -19,19 +19,7 @@
     <div class="field check-input-style">      
       <% @group.each do |g| %>      
         <div class="check-item-style">
-          <% if @groups_added.nil?  %>
-            <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id  %>          
-          <% end %>
-          <% if @groups_added.first.nil?  %>
-            <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id  %>          
-          <% else %>
-            <% if @groups_added.find_by(id: g.id)  %>
-              <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id, 'activated[]' %>          
-            <% else  %>
-              <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id  %>          
-            <% end %>
-          <% end %>
-
+          <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id, @wishlist.group_ids.include?(g.id)  %>              
           <%= label_tag(:icon, "#{g.name}", class: "font-label-style") %>
           <i class="<%= g.icon %> icon-size-group"></i> 
         </div>

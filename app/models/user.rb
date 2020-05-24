@@ -20,10 +20,10 @@ class User < ApplicationRecord
   end
 
   def wishlists_order_recent
-    wishlists.order(created_at: :desc).where(active: true)
+    wishlists.includes(:wishlists_groups).order(created_at: :desc).where(active: true)
   end
 
   def wishlists_order_ancient
-    wishlists.order(:created_at).where(active: true)
+    wishlists.includes(:wishlists_groups).order(:created_at).where(active: true)
   end
 end
