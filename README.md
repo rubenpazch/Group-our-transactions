@@ -11,6 +11,7 @@ The project you are going to build for the Ruby on Rails capstone is based on an
 
 - [Prerequisites](##Prerequisites)
 - [Installation](#Installing)
+- [live version](#Watch-the-live-version)
 - [Watch the live version](#Watch-the-live-version)
 - [Contributing](#Contributing)
 - [Team](#authors)
@@ -92,8 +93,19 @@ $ rails server
 click on the link to watch [live version](https://morning-taiga-75196.herokuapp.com/)
 
 
-![Preview](/Hnet-image.gif)
+## Extra feature
 
+![Preview](/docs/checkout.png)
+![Preview](/docs/payment.png)
+
+## Screenshots of the app
+
+![Preview](/docs/login.png)
+![Preview](/docs/register.png)
+![Preview](/docs/new.png)
+![Preview](/docs/profile.png)
+![Preview](/docs/login-register.png)
+![Preview](/docs/loginsave-wislist.png)
 
 ## Contributing
 
