@@ -2,14 +2,17 @@ one:
   name: "wishlist1"
   price: 5
   author_id: 1
+  active: true
   
 two: 
-  name: "wishlist3"
-  price: 5
-  author_id: 1
-
-three: 
   name: "wishlist2"
   price: 5
   author_id: 1
+  active: true
+
+three: 
+  name: "wishlist3"
+  price: 5
+  author_id: 1
+  active: true
   

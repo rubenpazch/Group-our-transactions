@@ -12,13 +12,6 @@ RSpec.describe UsersController, type: :controller do
     before { log_in user }
     before { log_in user2 }
 
-    describe '#index' do
-      it 'should return a list of all users' do
-        get :index
-        expect(assigns(:users).length).to eql(4)
-      end
-    end
-
     describe '#show' do
       it 'should return the user with given id' do
         new_user = FactoryBot.create :user
@@ -26,20 +19,7 @@ RSpec.describe UsersController, type: :controller do
         expect(assigns(:user)).to eql(nil)
       end
     end
-
-    describe '#index' do
-      subject { get :index }
-      it 'render the template' do
-        expect(subject).to render_template(:index)
-        expect(subject).to render_template('index')
-        expect(subject).to render_template('users/index')
-      end
-
-      it 'does not render a different template' do
-        expect(subject).to_not render_template('users/delete')
-      end
-    end
-
+    
     describe '#create' do
       it 'redirects to wishlists_url' do
         new_user = FactoryBot.build :user

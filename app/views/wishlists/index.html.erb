@@ -14,15 +14,13 @@
 <% @wishlists.each do |wishlist| %>
   <div class="item-wishlist">
     <div class="icon-wishlist">
-       <% if wishlist.icons? %>
-          <td> 
+       <% if wishlist.icons? %>          
             <% wishlist.groups.each do |t| %> 
               <i class="<%= t.icon %>"></i> 
               <br>
-            <% end %>
-          </td>
+            <% end %>          
         <% else %>
-          <td> <i class="fas fa-question-circle"></i> </td>
+          <i class="fas fa-question-circle"></i>
           <br>
         <% end%>  
     </div>
@@ -30,8 +28,12 @@
       <h2><%= link_to wishlist.name, wishlist %></h2>
       <h3><%= wishlist.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></h3>
     </div>
-    <div class="price-wishlist"><%= number_to_currency(wishlist.price, precision: 2)  %></div>
-    <div class="pay-wishlist"><%= button_to "Checkout", checkout_path(wishlist.id),  :class => "btn btn-success", :method => :get, params: {id: wishlist.id} %></div>
+    <div class="price-wishlist">
+      <%= number_to_currency(wishlist.price, precision: 2)  %>
+    </div>
+    <div class="pay-wishlist">
+      <%= button_to "Checkout", checkout_path(wishlist.id),  :class => "btn btn-success", :method => :get, params: {id: wishlist.id} %>
+    </div>
   </div>
 <% end %>
 

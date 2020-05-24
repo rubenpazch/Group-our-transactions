@@ -11,7 +11,7 @@ RSpec.describe 'wishlists/index', type: :view do
 
   it 'renders a list of wishlists' do
     render
-    assert_select 'tr>td', text: 'wishlist1'.to_s, count: 1
-    assert_select 'tr>td', text: 'wishlist3'.to_s, count: 1
+    assert_select 'div>h2>a', text: 'wishlist1'.to_s, count: 1
+    assert_select 'div>h2>a', text: 'wishlist2'.to_s, count: 1
   end
 end

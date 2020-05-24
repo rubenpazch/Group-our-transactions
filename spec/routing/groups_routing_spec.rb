@@ -30,8 +30,6 @@ RSpec.describe GroupsController, type: :routing do
       expect(patch: '/groups/1').to route_to('groups#update', id: '1')
     end
 
-    it 'routes to #destroy' do
-      expect(delete: '/groups/1').to route_to('groups#destroy', id: '1')
-    end
+
   end
 end

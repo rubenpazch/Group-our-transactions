@@ -14,15 +14,13 @@
 <% @wishlists.each do |wishlist| %>
   <div class="item-wishlist">
     <div class="icon-wishlist">
-       <% if wishlist.icons? %>
-          <td> 
+       <% if wishlist.icons? %>          
             <% wishlist.groups.each do |t| %> 
               <i class="<%= t.icon %>"></i> 
               <br>
-            <% end %>
-          </td>
+            <% end %>          
         <% else %>
-          <td> <i class="fas fa-question-circle"></i> </td>
+          <i class="fas fa-question-circle"></i>
         <% end%>  
     </div>
     <div class="content-wishlist">
