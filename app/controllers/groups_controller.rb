@@ -42,18 +42,10 @@ class GroupsController < ApplicationController
     @group.icon = params[:icon]
     if @group.update(group_params)
       redirect_to groups_path, notice: 'Group was successfully updated.'
+    elsif @group.errors[:icon].present?
+      redirect_to edit_group_url, notice: @group.errors[:icon].first
     else
-      redirect_to edit_group_url, notice: @group.errors[:name].first
-    end
-  end
-
-  # DELETE /groups/1
-  # DELETE /groups/1.json
-  def destroy
-    @group.destroy
-    respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Group was successfully destroyed.' }
-      format.json { head :no_content }
+      redirect_to edit_group_url, notice: @group.errors[:name].first      
     end
   end
 
