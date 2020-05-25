@@ -70,8 +70,10 @@ class WishlistsController < ApplicationController
         WishlistsGroup.where(wishlist_id: params[:id]).destroy_all
       end
       redirect_to wishlists_path, notice: 'Wishlist was successfully udpated.'
+    elsif @wishlist.errors[:price].present?
+      redirect_to edit_wishlist_url, notice: @wishlist.errors[:price].first
     else
-      redirect_to new_wishlist_url, notice: @user.errors[:username].first
+      redirect_to edit_wishlist_url, notice: @wishlist.errors[:name].first
     end
   end
 end
