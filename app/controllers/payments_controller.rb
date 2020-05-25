@@ -1,7 +1,7 @@
 class PaymentsController < ApplicationController
   before_action :logged_in_user
   before_action :set_group, only: %i[show edit update destroy]
-  
+
   def create
     @payment = Payment.new(payment_params)
 
