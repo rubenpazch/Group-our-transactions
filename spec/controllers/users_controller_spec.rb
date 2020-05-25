@@ -19,7 +19,7 @@ RSpec.describe UsersController, type: :controller do
         expect(assigns(:user)).to eql(nil)
       end
     end
-    
+
     describe '#create' do
       it 'redirects to wishlists_url' do
         new_user = FactoryBot.build :user

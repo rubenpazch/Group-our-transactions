@@ -1,9 +1,7 @@
 class PaymentsController < ApplicationController
   before_action :logged_in_user
   before_action :set_group, only: %i[show edit update destroy]
-
-  # POST /groups
-  # POST /groups.json
+  
   def create
     @payment = Payment.new(payment_params)
 
@@ -19,12 +17,10 @@ class PaymentsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_payment
     @payment = Payment.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def payment_params
     params.require(:payment).permit(:price, :transaction_code, :wishlist_id)
   end

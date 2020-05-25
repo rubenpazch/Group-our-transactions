@@ -55,5 +55,18 @@ RSpec.describe GroupsController, type: :controller do
         expect(response).to redirect_to new_group_url
       end
     end
+
+    describe '#update' do
+      it "updates the group and redirects groups_path" do
+        new_group = groups(:one)
+        patch :update, params: { group: {name: new_group.name}, icon: 'fab fa-500px',id: new_group.id }
+        expect(response).to redirect_to groups_path
+      end
+      it "updates the group and redirects edit_group_url" do
+        new_group = groups(:one)
+        patch :update, params: { group: {name: nil}, icon: 'fab fa-500px',id: new_group.id }
+        expect(response).to redirect_to edit_group_url
+      end
+    end
   end
 end
