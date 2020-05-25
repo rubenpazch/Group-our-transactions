@@ -1,3 +1,3 @@
 class Payment < ApplicationRecord
-    belongs_to :wishlist
+  belongs_to :wishlist
 end
