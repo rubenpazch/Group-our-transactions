@@ -1,0 +1,26 @@
+<% provide(:navbar_page_title, "wishlist information") %>
+<br><br>
+<p class="font-label-style">
+  <strong>Name:</strong>
+  <%= @wishlist.name %>
+</p>
+<p class="font-label-style">
+  <strong>Price:</strong>
+  <%= @wishlist.price %>
+</p>
+<p class="font-label-style">
+  <strong>Icon:</strong>
+  
+   <% if @wishlist.icons? %>
+          <td> 
+            <% @wishlist.groups.each do |t| %> 
+              <i class="<%= t.icon %>"></i> 
+            <% end %>
+          </td>
+        <% else %>
+          <td> <i class="fas fa-question-circle"></i> </td>
+    <% end%> 
+</p>
+<br><br>
+<%= link_to 'Edit', edit_wishlist_path(@wishlist), class: 'font-label-style link-edit-back' %> |
+<%= link_to 'Back', wishlists_path, class: 'font-label-style link-edit-back' %>

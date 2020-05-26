@@ -1,0 +1,29 @@
+<%= form_with( url: login_path, local: true) do |f| %>
+  <nav class="d-flex justify-content-between  align-items-center nav-top-bar">
+    <div class="options">
+      <ul class="nav-login">
+        <li class="nav-item">        
+          <%= link_to '<i class="fas fa-chevron-left"></i>'.html_safe, root_path, class:"link-back" %>
+        </li>  
+      </ul>
+    </div>
+    <h1 class="title-app">LOGIN</h1>
+    <div class="login-nav-bar">
+      <ul class="nav-login">
+        <li class="nav-item">      
+          <% if !logged_in?  %>
+          <%= f.submit "Log in", class: "btn btn-link link-login-submit" %>
+          <% end %>
+        </li>      
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="login-items ">
+    <li><br></li>
+    <li><br></li>
+    <li><%= f.text_field :username, class: 'form-control',placeholder: "username" %></li>
+    <li><br></li>    
+  </ul>
+<% end %>
+  

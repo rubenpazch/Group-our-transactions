@@ -1,0 +1,42 @@
+<% provide(:navbar_page_title, "all my wishlists") %>
+
+<div class="options-order">
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+  <div><%= link_to 'Most recent', wishlists_path, class:"btn btn-link link-login-submit" %></div>
+  <div><%= link_to 'Most ancient', list_order_ancient_path, class:"btn btn-link link-login-submit" %></div>
+</div>
+<div class="d-flex justify-content-between align-items-end  gitf-style">
+  <div>Gift credit</div>
+  <div><%=  number_to_currency(current_user.all_total_amount, precision: 2)   %></div>
+</div>    
+<br>
+
+<% @wishlists.each do |wishlist| %>
+  <div class="item-wishlist">
+    <div class="icon-wishlist">
+       <% if wishlist.icons? %>          
+            <% wishlist.groups.each do |t| %> 
+              <i class="<%= t.icon %>"></i> 
+              <br>
+            <% end %>          
+        <% else %>
+          <i class="fas fa-question-circle"></i>
+          <br>
+        <% end%>  
+    </div>
+    <div class="content-wishlist">
+      <h2><%= link_to wishlist.name, wishlist %></h2>
+      <h3><%= wishlist.created_at.strftime("%b %d, %Y - %I:%M%p" ).downcase %></h3>
+    </div>
+    <div class="price-wishlist">
+      <%= number_to_currency(wishlist.price, precision: 2)  %>
+    </div>
+    <div class="pay-wishlist">
+      <%= button_to "Checkout", checkout_path(wishlist.id),  :class => "btn btn-success", :method => :get, params: {id: wishlist.id} %>
+    </div>
+  </div>
+<% end %>
+
+
+
+<%= button_to "New", new_wishlist_path,  :class => "btn new-wishlist-button", :method => :get %>

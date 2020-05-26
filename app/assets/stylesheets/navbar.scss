@@ -1,0 +1,82 @@
+.nav-login {
+    background-color: #2b5f9a;
+}
+
+.nav-login li{
+    list-style: none;
+}
+
+nav {
+    background-color: #2b5f9a;
+}
+
+.title-app {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 5px 0 0 0; 
+    margin: 0;   
+}
+
+.nav-top-bar{
+    padding: 0 0 0  0;
+    margin: 0 0 0 -15px ;
+    width: 100vw;
+    height: 10vh;
+    font-size: 2.5rem;
+
+}
+
+.nav-top-bar a{
+    color: #fff;
+}
+
+.nav-top-bar h1{
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.link-back{
+    padding-left: 30px;
+}
+
+.link-login-submit{
+    padding-right: 30px;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+.message-style{
+    font-size: 2.5rem;;
+}
+
+
+  
+  .top-bar-md {
+    position: relative;
+  }
+  
+  .ham-bars {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    display: block;
+    top: 10px;
+    left: 20px;
+  }
+  
+  .link-back-nav-bar{
+    font-size: 2.5rem;
+    color: #878a8f;
+    padding-right: 15px;
+}
+
+.new-wishlist-button {
+    font-size: 2.5rem;
+    padding: 30px;   
+    margin-top: 30px;    
+    margin-left: 3vw;
+    background-color: #5fb523;
+    width: 90vw;
+    color: #fff;
+}

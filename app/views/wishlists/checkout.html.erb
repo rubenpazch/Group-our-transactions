@@ -1,0 +1,48 @@
+<% provide(:navbar_page_title, "Proceed payment") %>
+<br>
+<%= form_with(model: @payment, local: true) do |form| %>
+<div class="checkout-wrapper">
+
+  <p class="font-label-style checkout-items border-bottom pb-5">
+    <span>
+      <% if @wishlist.icons? %>            
+          <% @wishlist.groups.each do |t| %> 
+            <i class="<%= t.icon %>"></i> 
+          <% end %>            
+      <% else %>
+          <i class="fas fa-question-circle"></i> 
+      <% end%> 
+    </span>
+    <%= @wishlist.name %>
+  </p>
+
+  <p class="font-label-style checkout-items">
+    <strong>Transaction code:</strong>
+    <%= code =  "CODE234723" %>
+    
+    <%= form.hidden_field :transaction_code, :value => code %>
+  </p>
+
+  <p class="font-label-style checkout-items">
+    <strong>Date:</strong>
+    <%=   Time.zone.now .strftime("%b %d, %Y - %I:%M%p" ).downcase   %>    
+  </p>
+
+  <p class="font-label-style checkout-items">
+    <strong>Taxes 3%:</strong>
+    <%=  number_to_currency(@wishlist.price*0.3, precision: 2)  %>
+  </p>
+
+  <p class="font-label-style checkout-items border-bottom pb-5">
+    <strong>Total Payment:</strong>
+    <%= total_payment= number_to_currency(@wishlist.price + @wishlist.price*0.3, precision: 2)  %>    
+    <%= form.hidden_field :price, :value => @wishlist.price + @wishlist.price*0.3 %>
+    <%= form.hidden_field :wishlist_id, :value => @wishlist.id %>
+  </p>
+  
+  <br><br>
+</div>
+
+<%= button_to "Pay", wishlists_path,  :class => "btn new-wishlist-button", :method => :get %>
+
+  <% end %>

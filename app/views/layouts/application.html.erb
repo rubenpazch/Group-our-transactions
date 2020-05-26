@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GroupOurTransactions</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if logged_in?  %>
+      <%= render 'layouts/navbar'  %>    
+    <% end  %>              
+    <% flash.each do |message_type, message| %>
+       <div class="alert alert-info message-style"><%= message %></div>
+    <% end %>
+    <main class="container-fluid main-wrapper">
+      <div class="col-12 content-wrapper">              
+        <%= yield %>
+      </div>    
+    <main>
+  </body>
+</html>

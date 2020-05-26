@@ -1,0 +1,37 @@
+
+<div>
+  <%= form_with(model: wishlist, local: true) do |form| %>
+    
+    <div class="field">
+      <div class="form-input">
+        <%= form.text_field :name, class: 'form-control font-label-style',placeholder: "Name of the wishlist"  %>
+      </div>
+    </div>
+
+    <div class="field">          
+      <div class="form-input">
+        <%= form.number_field :price, class: 'form-control font-label-style',placeholder: "price example:15" %>
+      </div>
+    </div>
+    <br>
+    <div><%= form.label :icon, class: "font-label-style" %></div>
+    
+    <div class="field check-input-style">      
+      <% @group.each do |g| %>      
+        <div class="check-item-style">
+          <%= check_box_tag "wishlist[group_ids][#{g.id}]", g.id, @wishlist.group_ids.include?(g.id)  %>              
+          <%= label_tag(:icon, "#{g.name}", class: "font-label-style") %>
+          <i class="<%= g.icon %> icon-size-group"></i> 
+        </div>
+      <% end %>
+    </div>
+    
+    <div class="actions">
+      <div>        
+        
+        <%= form.submit "Save", class: "btn new-wishlist-button" %>
+        
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,77 @@
+.container-home{
+    min-height: 100vh;
+    
+}
+
+.title-home{
+    min-height: 70vh;
+    
+}
+
+.title-home h1 {
+    font-size: 4rem;
+    font-family: 'proximanova';
+    font-style: italic;
+}
+
+.login-home{
+    min-height: 30vh;   
+    text-align: center; 
+}
+
+.btn-custom-login{
+    background-color: #3778c2;
+    color: #fff;
+    width: 90vw;
+    height: 10vh;
+    font-size: 2.5rem;
+}
+
+.btn-custom-signup{
+    background-color: #fff;
+    color: #434b54;
+    width: 90vw;
+    height: 10vh;
+    font-size: 2.5rem;
+    padding-top: 30px;
+    
+}
+
+@media (max-width: 767px) {
+    .btn-custom-login{
+        background-color: #3778c2;
+        color: #fff;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+    }
+    
+    .btn-custom-signup{
+        background-color: #fff;
+        color: #434b54;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
+}
+@media (max-width: 991px) {
+    .btn-custom-login{
+        background-color: #3778c2;
+        color: #fff;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+    }
+    
+    .btn-custom-signup{
+        background-color: #fff;
+        color: #434b54;
+        width: 90vw;
+        height: 10vh;
+        font-size: 2.5rem;
+        padding-top: 30px;
+        
+    }
+}
