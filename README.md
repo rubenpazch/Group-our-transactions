@@ -37,6 +37,7 @@
     <a href="https://morning-taiga-75196.herokuapp.com/">View Demo</a>   &#10023;  
     <a href="https://github.com/rubenpazch/Group-our-transactions/issues">Report Bug</a>    &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Installing">Installing</a> &#10023;
+    <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Extra-Feature">Extra Feature</a> &#10023;
   </p>
 
 <br/>
@@ -49,6 +50,10 @@ It is required to sing in before to start using this application, Group our Wish
 
 When you don't want to associate with any category you can create a wishlist that will be not associated with any group or category, finally check out is the extra feature added to be able to proceed with the check out for any of the products you saved.
 
+
+<br/>
+
+<iframe src="https://giphy.com/embed/H7kxnZEO1l5iBRXWf3" width="480" height="234" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H7kxnZEO1l5iBRXWf3">via GIPHY</a></p>
 
 <br/>
 
@@ -124,7 +129,7 @@ $ rails server
 
 <br/>
 
-## Watch the live version
+## Watch the Live Version
 
 
 click on the link to watch [live version](https://morning-taiga-75196.herokuapp.com/)
@@ -132,7 +137,7 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 <br/>
 
 
-## Extra feature
+## Extra Feature
 
 + Click on checkout 
 + press button payment
