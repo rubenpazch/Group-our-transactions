@@ -5,10 +5,16 @@
 <p align="center">
     <a href="https://img.shields.io/badge/Microverse-blueviolet" alt="Contributors">
         <img src="https://img.shields.io/badge/Microverse-blueviolet" /></a>
-    <a href="#backers" alt="Backers on Open Collective">
-        <img src="https://img.shields.io/badge/ruby-2.6.5-blue" /></a>
-    <a href="#" alt="Activity">
-        <img src="https://img.shields.io/badge/build-passing-green" /></a>
+    <a href="https://ruby-doc.org/core-2.7.0/Array.html" alt="Ruby">
+        <img src="https://img.shields.io/badge/Ruby-2.6.5-blue" /></a>
+    <a href="https://rubyonrails.org/" alt="Rails">
+        <img src="https://img.shields.io/badge/Rails-6.0.3-blue" /></a>
+    <a href="https://www.rubydoc.info/gems/bootstrap-sass/3.3.6" alt="Bootstrap-sass">
+        <img src="https://img.shields.io/badge/Bootstrap--sass-3.4.1-lightgrey" /></a>
+    <a href="https://rspec.info/documentation/" alt="Rspec-rails">
+        <img src="https://img.shields.io/badge/Rspec--rails-4.0.0-orange" /></a>
+    <a href="https://rubygems.org/gems/pg/versions/0.18.4?locale=es" alt="Postgresql">
+        <img src="https://img.shields.io/badge/Postgresql-2.0-yellow" /></a>
 </p>
 
 
@@ -17,7 +23,7 @@
 </p>
 
 Group our Wishlist is web application with responsive behavior
-built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements  <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find this options (<b>login/sing up  </b>,<b> all my wishlist</b>,<b> all my external wishlist </b>,<b> all groups and log out</b>, <b> checkout a wish list aditional feature </b>).
+built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements  <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find this options (<b>login/sing up  </b>,<b> all my wishlist</b>,<b> all my external wishlist </b>,<b> all groups and log out</b>, <b> checkout a wish list aditional feature </b>), it is required to sing up before to start using this application, remember that a wishlist is related to online store where you buy some products, sometimes you just want to save some product that you want to review later, this is tha basic idea about group our wishlist, groups allow you to separate your wishlist like a category in your products, finally when you dont want to associate to any category you can create a wishlist that will be not associate to any group.
 
 ---
 
@@ -47,6 +53,7 @@ This project was built using Ruby and Rails version 6, it is a web application a
 - ruby 2.6.5
 - rails 6.0.3
 - bootstrap 
+- Rspec 
 - jquery
 - faker
 - factory bot
