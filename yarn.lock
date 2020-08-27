@@ -1879,7 +1879,7 @@ compression-webpack-plugin@^3.0.0:
     find-cache-dir "^3.0.0"
     neo-async "^2.5.0"
     schema-utils "^2.6.1"
-    serialize-javascript "^2.1.2"
+    serialize-javascript "^3.1.0"
     webpack-sources "^1.0.1"
 
 compression@^1.7.4:
@@ -2021,7 +2021,7 @@ create-ecdh@^4.0.0:
   integrity sha512-GbEHQPMOswGpKXM9kCWVrremUcBmjteUaQ01T9rkKCPDXfUHX0IoP9LpHYo2NPFampa4e+/pFDc3jQdxrxQLaw==
   dependencies:
     bn.js "^4.1.0"
-    elliptic "^6.0.0"
+    elliptic "^6.5.3"
 
 create-hash@^1.1.0, create-hash@^1.1.2, create-hash@^1.2.0:
   version "1.2.0"
@@ -3163,7 +3163,7 @@ globule@^1.0.0:
   integrity sha512-OVyWOHgw29yosRHCHo7NncwR1hW5ew0W/UrvtwvjefVJeQ26q4/8r8FmPsSF1hJ93IgWkyv16pCTz6WblMzm/g==
   dependencies:
     glob "~7.1.1"
-    lodash "~4.17.12"
+    lodash "~4.17.19"
     minimatch "~3.0.2"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.2.2:
@@ -7378,7 +7378,7 @@ websocket-driver@0.6.5:
   resolved "https://registry.yarnpkg.com/websocket-driver/-/websocket-driver-0.6.5.tgz#5cb2556ceb85f4373c6d8238aa691c8454e13a36"
   integrity sha1-XLJVbOuF9Dc8bYI4qmkchFThOjY=
   dependencies:
-    websocket-extensions ">=0.1.1"
+    websocket-extensions ">=0.1.4"
 
 websocket-driver@>=0.5.1:
   version "0.7.3"
@@ -7387,7 +7387,7 @@ websocket-driver@>=0.5.1:
   dependencies:
     http-parser-js ">=0.4.0 <0.4.11"
     safe-buffer ">=5.1.0"
-    websocket-extensions ">=0.1.1"
+    websocket-extensions ">=0.1.4"
 
 websocket-extensions@>=0.1.1:
   version "0.1.3"
