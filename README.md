@@ -17,7 +17,7 @@
 </p>
 
 Group our Wishlist is web application with responsive behavior
-built with <b>Ruby on Rails</b> web applications based on an app for grouping payments by a goal with your family/friends. It can be for grouping hours spent on different projects at your university or for grouping kilometers by means of transportations in your family - anything that you can share with other people and group by some category.
+built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements  <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find this options (<b>login/sing up  </b>,<b> all my wishlist</b>,<b> all my external wishlist </b>,<b> all groups and log out</b>, <b> checkout a wish list aditional feature </b>).
 
 ---
 
