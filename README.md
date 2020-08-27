@@ -22,8 +22,12 @@
     <h1 align="center"> Group our Wishlist   </h1>    
 </p>
 
-Group our Wishlist is web application with responsive behavior
-built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements  <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find this options (<b>login/sing up  </b>,<b> all my wishlist</b>,<b> all my external wishlist </b>,<b> all groups and log out</b>, <b> checkout a wish list aditional feature </b>), it is required to sing up before to start using this application, remember that a wishlist is related to online store where you buy some products, sometimes you just want to save some product that you want to review later, this is tha basic idea about group our wishlist, groups allow you to separate your wishlist like a category in your products, finally when you dont want to associate to any category you can create a wishlist that will be not associate to any group.
+Group our Wishlist is a web application with responsive behavior
+built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements   <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>login</b>, <b> sign-in</b>,<b> all my wishlist</b>,<b> all my external wishlist</b>,<b> all groups and log out</b>, <b> check out a wish list as an additional feature</b>). 
+
+It is required to sing in before to start using this application, Group our Wishlist is related with an online store where you buy some products, sometimes you just want to save some product that you want to review later, this is the basic idea about group our wishlist, <b> you can save a product wish</b>, groups allow you to separate your list of wish with a specific category. 
+
+When you don't want to associate with any category you can create a wishlist that will be not associated with any group or category, finally check out is the extra feature added to be able to proceed with the check out for any of the products you saved.
 
 ---
 
