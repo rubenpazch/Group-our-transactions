@@ -36,3 +36,4 @@ yarn-debug.log*
 .yarn-integrity
 /node_modules
 .examples.txt
+.README_new.md
