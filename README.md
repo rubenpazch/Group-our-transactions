@@ -15,6 +15,8 @@
         <img src="https://img.shields.io/badge/Rspec--rails-4.0.0-orange" /></a>
     <a href="https://rubygems.org/gems/pg/versions/0.18.4?locale=es" alt="Postgresql">
         <img src="https://img.shields.io/badge/Postgresql-2.0-yellow" /></a>
+    <a href="https://www.heroku.com/" alt="Heroku">
+        <img src="https://img.shields.io/badge/Heroku-published-lightgrey" /></a>
 </p>
 
 
