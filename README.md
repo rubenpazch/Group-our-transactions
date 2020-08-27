@@ -34,12 +34,14 @@
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore this project »</strong></a>
     <br />
     <br />&#10023;
-    <a href="#">View Demo</a>   &#10023;  
-    <a href="#">Report Bug</a>    &#10023;
-    <a href="#">Request Feature</a> &#10023;
+    <a href="https://morning-taiga-75196.herokuapp.com/">View Demo</a>   &#10023;  
+    <a href="https://github.com/rubenpazch/Group-our-transactions/issues">Report Bug</a>    &#10023;
+    <a href="#Getting-Started">Getting Started</a> &#10023;
   </p>
 
+<br/>
 
+---
 
 Group our Wishlist is a web application with responsive behavior for mobile usage
 built with <b>Ruby on Rails</b> this application is based on an app for grouping payments by a goal with your family/friends you can find the full requirements   <a href="https://www.notion.so/microverse/Group-our-transactions-ccea2b6642664540a70de9f30bdff4ce" alt="Requirements">here</a>. Exploring this project you can find these options (<b>login</b>, <b> sign-in</b>,<b> all my wishlist</b>,<b> all my external wishlist</b>,<b> all groups and log out</b>, <b> check out a wish list as an additional feature</b>). 
@@ -49,23 +51,7 @@ It is required to sing in before to start using this application, Group our Wish
 When you don't want to associate with any category you can create a wishlist that will be not associated with any group or category, finally check out is the extra feature added to be able to proceed with the check out for any of the products you saved.
 
 ---
-
-
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
-
-- [Prerequisites](##Prerequisites)
-- [Installation](#Installing)
-- [live version](#Watch-the-live-version)
-- [Watch the live version](#Watch-the-live-version)
-- [Contributing](#Contributing)
-- [Team](#authors)
-- [License](#license)
-
-
----
-
+<br/>
 
 ### Getting Started
 
