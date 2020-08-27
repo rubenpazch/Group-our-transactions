@@ -70,11 +70,6 @@ This project was built using Ruby and Rails version 6, it is a web application a
 
 - Ruby 2.6.5
 - Rails 6.0.3
-- Bootstrap 
-- Rspec 
-- Jquery
-- Faker
-- Factory Bot
 - Git
 
 ### Setup
@@ -170,7 +165,11 @@ heroku run rake db:migrate
 - Visual Studio Code
 - VSCode Ruby by Stafford Brunk
 - Rubocop for Visual Studio Code
-
+- Bootstrap 
+- Rspec 
+- Jquery
+- Faker
+- Factory Bot
 
 
 <br/>
@@ -203,15 +202,9 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 
 ## Contributing
 
-contributions, issues, and feature requests are welcome!<br/>feel free to check [issues page](https://github.com/rubenpazch/Group-our-transactions/issues).
+Contributions, issues and feature requests are welcome!
 
-1. fork it (https://github.com/rubenpazch/Group-our-transactions/develop/fork)
-2. create your working branch (git checkout -b [choose-a-name])
-3. commit your changes (git commit -am 'what this commit will fix/add/improve')
-4. push to the branch (git push origin [chosen-name])
-5. create a new pull request
-
-
+Feel free to check the [issues page](https://github.com/rubenpazch/Group-our-transactions/issues).
 
 
 ## Authors
@@ -220,7 +213,7 @@ contributions, issues, and feature requests are welcome!<br/>feel free to check 
 
 - Github: [@rubenpazch](https://github.com/rubenpazch)
 - Linkedin: [rubenpch](https://www.linkedin.com/in/rubenpch/)
-
+- Twitter: [@ChuspePaz](https://twitter.com/ChuspePaz)
 
 ### Show your support
 
@@ -233,6 +226,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Design idea by Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
+* [Creative Commons ](https://creativecommons.org/licenses/by-nc/4.0/)
+
