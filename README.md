@@ -57,6 +57,22 @@ When you don't want to associate with any category you can create a wishlist tha
 
 This project was built using Ruby and Rails version 6, it is a web application and for running on your local environment you should follow these guidelines.
 
+### The Project
+
+this project can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or you just can clone the project using this command 
+
+
+
+```
+# git clone  git@github.com:rubenpazch/Group-our-transactions.git
+```
+
++ Open terminal on your workspace with
+
+```
+cd /home/project_folder/..
+```
+
 ### Prerequisites
 
 - Ruby 2.6.5
@@ -76,21 +92,7 @@ This project was built using Ruby and Rails version 6, it is a web application a
 
 <br/>
 
-## The Project
 
-this project can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or you just can clone the project using this command 
-
-
-
-```
-# git clone  git@github.com:rubenpazch/Group-our-transactions.git
-```
-
-+ Open terminal on your workspace with
-
-```
-cd /home/project_folder/..
-```
 
 ### Installing
 
