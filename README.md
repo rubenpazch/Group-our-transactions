@@ -36,7 +36,7 @@
     <br />&#10023;
     <a href="https://morning-taiga-75196.herokuapp.com/">View Demo</a>   &#10023;  
     <a href="https://github.com/rubenpazch/Group-our-transactions/issues">Report Bug</a>    &#10023;
-    <a href="#Getting-Started">Getting Started</a> &#10023;
+    <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Installing">Installing</a> &#10023;
   </p>
 
 <br/>
@@ -94,7 +94,7 @@ cd /home/project_folder/..
 
 
 
-### Installing
+## Installing
 
 
 To get started with the app, clone the repo and then install the needed gems:
