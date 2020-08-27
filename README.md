@@ -122,11 +122,14 @@ $ rails server
 
 
 
+<br/>
 
 ## Watch the live version
 
 
 click on the link to watch [live version](https://morning-taiga-75196.herokuapp.com/)
+
+<br/>
 
 
 ## Extra feature
