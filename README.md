@@ -55,6 +55,8 @@ When you don't want to associate with any category you can create a wishlist tha
 
 ![Video](/images/gif-wishlist.gif)
 
+<img src="/images/gif-wishlist.gif" />
+
 <br/>
 
 ## Getting Started
