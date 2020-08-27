@@ -59,14 +59,14 @@ This project was built using Ruby and Rails version 6, it is a web application a
 
 ### Prerequisites
 
-- ruby 2.6.5
-- rails 6.0.3
-- bootstrap 
+- Ruby 2.6.5
+- Rails 6.0.3
+- Bootstrap 
 - Rspec 
-- jquery
-- faker
-- factory bot
-- git
+- Jquery
+- Faker
+- Factory Bot
+- Git
 
 ## Tools used on this project
 
