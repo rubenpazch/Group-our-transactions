@@ -1,11 +1,18 @@
+<p align="center">
+    <img src="./images/phone-wishlist.png"
+        height="230">
+</p>
+<p align="center">
+    <a href="https://img.shields.io/badge/Microverse-blueviolet" alt="Contributors">
+        <img src="https://img.shields.io/badge/Microverse-blueviolet" /></a>
+    <a href="#backers" alt="Backers on Open Collective">
+        <img src="https://img.shields.io/badge/ruby-2.6.5-blue" /></a>
+    <a href="#" alt="Activity">
+        <img src="https://img.shields.io/badge/build-passing-green" /></a>
+</p>
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/rubenpch/]
-
-![](https://img.shields.io/badge/Microverse-blueviolet)
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
 <!-- PROJECT LOGO -->
-
 
 
 # Group our Wishlist   
