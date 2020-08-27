@@ -53,7 +53,7 @@ When you don't want to associate with any category you can create a wishlist tha
 
 <br/>
 
-<iframe src="https://giphy.com/embed/H7kxnZEO1l5iBRXWf3" width="480" height="234" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/H7kxnZEO1l5iBRXWf3">via GIPHY</a></p>
+![Video](/images/gif-wishlist.gif)
 
 <br/>
 
