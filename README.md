@@ -13,12 +13,11 @@
 
 
 <p align="center">
-    <h1 align="center"> Group our Wishlist   </h1>
-    <br />
+    <h1 align="center"> Group our Wishlist   </h1>    
 </p>
 
 Group our Wishlist is web application with responsive behavior
-Build a Ruby on Rails web applications based on an app for grouping payments by a goal with your family/friends. It can be for grouping hours spent on different projects at your university or for grouping kilometers by means of transportations in your family - anything that you can share with other people and group by some category.
+built with <b>Ruby on Rails</b> web applications based on an app for grouping payments by a goal with your family/friends. It can be for grouping hours spent on different projects at your university or for grouping kilometers by means of transportations in your family - anything that you can share with other people and group by some category.
 
 ---
 
