@@ -116,13 +116,6 @@ Next, migrate the database:
 # rails db:migrate
 ```
 
-Finally, run the test suite to verify that everything is working correctly:
-
-```
-# bundle exec rspec
-```
-
-If the test suite passes, you'll be ready to run the app in a local server:
 
 ```
 $ rails server
@@ -136,6 +129,41 @@ To watch the local version of this project check on your browser for the link
 Listening on tcp://127.0.0.1:3000
 ```
 
+### Run tests
+
+Run the test suite to verify that everything is working correctly:
+
+```
+# bundle exec rspec
+```
+
+If the test suite passes, you'll be ready to run the app in a local server:
+
+
+### Deployment
+
+To deploy to heroku first login in heroku
+
+```
+# heroku login
+```
+
+Create a new project in heroku
+
+```
+# heroku create
+```
+
+You can verify that the remote was added to your project by running:
+```
+# git config --list | grep heroku
+# git push heroku master
+```
+
+Migrate your database
+```
+heroku run rake db:migrate
+```
 
 ### Tools used on this project
 
