@@ -38,7 +38,11 @@
     <a href="https://github.com/rubenpazch/Group-our-transactions/issues">Report Bug</a>    &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Installing">Installing</a> &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Extra-Feature">Extra Feature</a> &#10023;
+    <a href="#Screenshots-of-the-App">Screenshots of the App</a> &#10023;
+    
   </p>
+
+
 
 <br/>
 
@@ -63,18 +67,25 @@ This project was built using Ruby and Rails version 6, it is a web application a
 
 ### The Project
 
-this project can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or you just can clone the project using this command 
+The project repository can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or just clone the project using this command. 
 
 
 
 ```
+Using SSH 
+
+# git clone  https://github.com/rubenpazch/Group-our-transactions.git
+
+Using HTTPS
+
 # git clone  git@github.com:rubenpazch/Group-our-transactions.git
+
 ```
 
 + Open terminal on your workspace with
 
 ```
-cd /home/project_folder/..
+cd /home/workspace/Group-our-transactions
 ```
 
 ### Prerequisites
@@ -139,14 +150,14 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 
 ## Extra Feature
 
-+ Click on checkout 
-+ press button payment
-+ Notes.- After save the payment the wishlist will disappear from the list
++ Click on the checkout button of the specific wishlist.
++ Proceed with the payment.
++ Notes.- After saving the payment the wishlist will disappear from the list
 
 ![Preview](./docs/checkout.png)
 ![Preview](./docs/payment.png)
 
-## Screenshots of the app
+## Screenshots of the App
 
 ![Preview](./docs/login.png)
 ![Preview](./docs/register.png)
