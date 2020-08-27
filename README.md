@@ -53,7 +53,7 @@ When you don't want to associate with any category you can create a wishlist tha
 ---
 <br/>
 
-### Getting Started
+## Getting Started
 
 This project was built using Ruby and Rails version 6, it is a web application and for running on your local environment you should follow these guidelines.
 
@@ -68,13 +68,15 @@ This project was built using Ruby and Rails version 6, it is a web application a
 - Factory Bot
 - Git
 
-## Tools used on this project
+### Tools used on this project
 
 - Visual Studio Code
 - VSCode Ruby by Stafford Brunk
 - Rubocop for Visual Studio Code
 
-## The project
+<br/>
+
+## The Project
 
 this project can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or you just can clone the project using this command 
 
