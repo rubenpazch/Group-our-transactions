@@ -65,9 +65,21 @@ When you don't want to associate with any category you can create a wishlist tha
 
 This project was built using Ruby and Rails version 6, it is a web application and for running on your local environment you should follow these guidelines.
 
-### The Project
 
-The project repository can be found in [github link](https://github.com/rubenpazch/Group-our-transactions) or just clone the project using this command. 
+### Prerequisites
+
+- Ruby 2.6.5
+- Rails 6.0.3
+- Bootstrap 
+- Rspec 
+- Jquery
+- Faker
+- Factory Bot
+- Git
+
+### Setup
+
+The project repository can be found in [GitHub link](https://github.com/rubenpazch/Group-our-transactions) or just clone the project using this command. 
 
 
 
@@ -88,31 +100,11 @@ Using HTTPS
 cd /home/workspace/Group-our-transactions
 ```
 
-### Prerequisites
 
-- Ruby 2.6.5
-- Rails 6.0.3
-- Bootstrap 
-- Rspec 
-- Jquery
-- Faker
-- Factory Bot
-- Git
-
-### Tools used on this project
-
-- Visual Studio Code
-- VSCode Ruby by Stafford Brunk
-- Rubocop for Visual Studio Code
-
-<br/>
+## Install
 
 
-
-## Installing
-
-
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo, and then install the needed gems:
 
 ```
 # bundle install --without production
@@ -135,6 +127,21 @@ If the test suite passes, you'll be ready to run the app in a local server:
 ```
 $ rails server
 ```
+
+### Usage
+
+To watch the local version of this project check on your browser for the link 
+
+```
+Listening on tcp://127.0.0.1:3000
+```
+
+
+### Tools used on this project
+
+- Visual Studio Code
+- VSCode Ruby by Stafford Brunk
+- Rubocop for Visual Studio Code
 
 
 
