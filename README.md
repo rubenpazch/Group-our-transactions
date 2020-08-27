@@ -143,17 +143,17 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 + press button payment
 + Notes.- After save the payment the wishlist will disappear from the list
 
-![Preview](/docs/checkout.png)
-![Preview](/docs/payment.png)
+![Preview](./docs/checkout.png)
+![Preview](./docs/payment.png)
 
 ## Screenshots of the app
 
-![Preview](/docs/login.png)
-![Preview](/docs/register.png)
-![Preview](/docs/new.png)
-![Preview](/docs/profile.png)
-![Preview](/docs/login-register.png)
-![Preview](/docs/save-wislist.png)
+![Preview](./docs/login.png)
+![Preview](./docs/register.png)
+![Preview](./docs/new.png)
+![Preview](./docs/profile.png)
+![Preview](./docs/login-register.png)
+![Preview](./docs/save-wislist.png)
 
 ## Contributing
 
