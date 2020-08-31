@@ -37,7 +37,7 @@
     <a href="https://morning-taiga-75196.herokuapp.com/">View Demo</a>   &#10023;  
     <a href="https://github.com/rubenpazch/Group-our-transactions/issues">Report Bug</a>    &#10023;
     <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Install">Installing</a> &#10023;
-    <a href="#Getting-Started">Getting Started</a> &#10023; <a href="#Extra-Feature">Extra Feature</a> &#10023;
+    <a href="#Extra-Feature">Extra Feature</a> &#10023;
     <a href="#Screenshots-of-the-App">Screenshots of the App</a> &#10023;
     <a href="#Authors">Author</a> &#10023;
     
