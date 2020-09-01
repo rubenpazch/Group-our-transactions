@@ -203,7 +203,7 @@ click on the link to watch [live version](https://morning-taiga-75196.herokuapp.
 
 ## Contributing
 
-Contributions, issues and feature requests are welcome!
+This project was created for educational purposes as part of the Microverse web development curriculum; contributing is not accepted.
 
 Feel free to check the [issues page](https://github.com/rubenpazch/Group-our-transactions/issues).
 
